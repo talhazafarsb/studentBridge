@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Student Bridge</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <style>
+        .card-hover {
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+        }
+
+        .visa-details {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.75);
+          color: #fff;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
+          text-align: center;
+        }
+
+        .card-hover:hover .visa-details {
+          opacity: 1;
+        }
+
+        .card-img-top {
+          /*height: 200px;*/
+          object-fit: cover;
+        }
+        .marquee-container {
+          width: 100%;
+          overflow: hidden;
+          /*box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);*/
+          /*background: white;
+          border-radius: 12px;*/
+          padding: 1rem 0;
+          /*border: 1px solid #ddd;*/
+        }
+        .marquee-track {
+          display: flex;
+          gap: 3rem;
+          align-items: center;
+          animation: marquee 28s linear infinite;
+          will-change: transform;
+        }
+        /* Duplicate images in track for seamless */
+        .marquee-track img {
+          /*max-height: 80px;*/
+          max-width: 120px;
+          filter: grayscale(40%);
+          opacity: 0.85;
+          transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+          cursor: pointer;
+          user-select: none;
+        }
+        .marquee-track img:hover {
+          filter: grayscale(0%);
+          opacity: 1;
+          transform: scale(1.1);
+        }
+
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+    </style>
+
+    <body>
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <!-- <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a> -->
+                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                            <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark px-3 sticky-top">
+          <div class="container-fluid">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+              <img src="img/logo.png" alt="Logo" id="navbarLogo">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+              <!-- Menu -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">Services</a>
+                </li>
+
+                <!-- First-Level Dropdown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Student Destinations
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class="dropdown-item" href="#">Study in UK</a></li>
+
+                    <!-- Second-Level Dropdown -->
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle" href="#">Study in Europe</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Study in France</a></li>
+                        <li><a class="dropdown-item" href="#">Study in Germany</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Study in USA</a></li>
+                    <li><a class="dropdown-item" href="#">Study in Australia</a></li>
+                    <li><a class="dropdown-item" href="#">Study in Canada</a></li>
+                    <li><a class="dropdown-item" href="#">Study in Ireland</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Resources</a>
+                </li> -->
+              </ul>
+
+              <!-- Right Button -->
+              <a href="#" class="btn btn-primary">Book Consultation</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar & Hero End -->
+        
+        <!-- Carousel Start -->
+        <div class="header-carousel owl-carousel">
+            <div class="header-carousel-item">
+                <div class="header-carousel-item-img-1">
+                    <img src="img/slider_image.png" class="img-fluid w-100" alt="Image">
+                </div>
+                <div class="carousel-caption">
+                    <div class="carousel-caption-inner text-start p-3">
+                        <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.3s" style="animation-delay: 1.3s;">Your Trusted Student Consultancy Partner Worldwide.</h1>
+                        <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.5s;">Guiding students to top global universities with expert counseling, application support, and visa assistance. Empower your future with us. 
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="#">Book a Consultant</a>
+                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-carousel-item mx-auto">
+                <div class="header-carousel-item-img-2">
+                    <img src="img/slider_image2.jpg" class="img-fluid w-100" alt="Image">
+                </div>
+                <div class="carousel-caption">
+                    <div class="carousel-caption-inner text-center p-3">
+                        <h1 class="display-1 text-capitalize text-white mb-4">Shape Your Future with Global Education Experts.</h1>
+                        <p class="mb-5 fs-5">We help students unlock international opportunities by connecting them with the best universities and career pathways around the globe. 
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" href="#">Book a Consultant</a>
+                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-carousel-item">
+                <div class="header-carousel-item-img-3">
+                    <img src="img/slider_image3.jpg" class="img-fluid w-100" alt="Image">
+                </div>
+                <div class="carousel-caption">
+                    <div class="carousel-caption-inner text-end p-3">
+                        <h1 class="display-1 text-capitalize text-white mb-4">Study Abroad Made Simple & Stress-Free.</h1>
+                        <p class="mb-5 fs-5">From finding the right course to visa applications—we’re here every step of the way. Your dream university is just a click away. 
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" href="#">Book a Consultant</a>
+                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+        <!-- destinations -->
+        <div class="container-fluid service py-5">
+            <div class="container py-4">
+                <h2 class="text-center mb-4">Destinations Around the Globe</h2>
+                <div class="row g-4">
+                <!-- UK Card -->
+                <div class="col-md-3">
+                  <div class="card card-hover">
+                    <img src="img/usa.jpg" class="card-img-top" alt="UK Flag">
+                    <div class="visa-details">  
+                      <p>UK Visa: Includes tourist, work, and student visas. Apply via GOV.UK portal.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- US Card -->
+                <div class="col-md-3">
+                  <div class="card card-hover">
+                    <img src="img/uk.jpg" class="card-img-top" alt="US Flag">
+                    <div class="visa-details">
+                      <p>US Visa: B1/B2 for travel/business. F1 for students. Apply via US embassy.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- France Card -->
+                <div class="col-md-3">
+                  <div class="card card-hover">
+                    <img src="img/france.jpg" class="card-img-top" alt="France Flag">
+                    <div class="visa-details">
+                      <p>France Visa: Schengen short-stay or long-stay visa. Apply via France-Visas portal.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Australia Card -->
+                <div class="col-md-3">
+                  <div class="card card-hover">
+                    <img src="img/australia.jpg" class="card-img-top" alt="Australia Flag">
+                    <div class="visa-details">
+                      <p>Australia Visa: eVisitor, tourist stream, or subclass 500 for students.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>    
+
+        <!-- end destinations -->
+        <!-- popular universities -->
+        <div class="container-fluid service py-5">
+            <div class="marquee-container" aria-label="Brand logos marquee" role="region">
+                <h1 class="text-center">Popular Universities to Study</h1>
+                <div class="marquee-track" aria-live="off" aria-atomic="true">
+                  <img src="img/universities/u1.png" alt="" />
+                  <img src="img/universities/u2.png" alt="" />
+                  <img src="img/universities/u3.png" alt="Volkswagen" />
+                  <img src="img/universities/u4.png" alt="BMW" />
+                  <img src="img/universities/u5.png" alt="Mercedes-Benz" />
+                  <img src="img/universities/u6.png" alt="Audi" />
+                  <img src="img/universities/u7.png" alt="Honda" />
+                  <img src="img/universities/u8.png" alt="Nissan" />
+                  <img src="img/universities/u9.png" alt="Hyundai" />
+                  <img src="img/universities/u10.png" alt="Kia" />
+                  <img src="img/universities/u11.png" alt="Chevrolet" />
+                  <img src="img/universities/u12.png" alt="Jeep" />
+                  <img src="img/universities/u13.png" alt="Jeep" />
+                  <img src="img/universities/u14.png" alt="Jeep" />
+                  <img src="img/universities/u15.png" alt="Jeep" />
+                  <img src="img/universities/u16.png" alt="Jeep" />
+                  <img src="img/universities/u17.png" alt="Jeep" />
+                  <img src="img/universities/u18.png" alt="Jeep" />
+                  <img src="img/universities/u19.png" alt="Jeep" />
+                  <img src="img/universities/u20.png" alt="Jeep" />
+                  <img src="img/universities/u21.png" alt="Jeep" />
+                  <img src="img/universities/u22.png" alt="Jeep" />
+                  <img src="img/universities/u23.png" alt="Jeep" />
+                  <img src="img/universities/u24.png" alt="Jeep" />
+                  <img src="img/universities/u25.png" alt="Jeep" />
+                  <img src="img/universities/u26.png" alt="Jeep" />
+                  <img src="img/universities/u27.png" alt="Jeep" />
+                  <img src="img/universities/u28.png" alt="Jeep" />
+                  <img src="img/universities/u29.png" alt="Jeep" />
+                  <img src="img/universities/u30.png" alt="Jeep" />
+                  <img src="img/universities/u31.png" alt="Jeep" />
+                  <img src="img/universities/u32.png" alt="Jeep" />
+                  <img src="img/universities/u33.png" alt="Jeep" />
+                  <img src="img/universities/u34.png" alt="Jeep" />
+                  <img src="img/universities/u35.png" alt="Jeep" />
+                  <img src="img/universities/u36.png" alt="Jeep" />
+                </div>
+          </div>
+        </div>
+        <!-- end popular universities -->
+        
+        <!-- Services Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                    <h4 class="text-primary">Our Services</h4>
+                    <h1 class="display-4"> Offering the Best Consulting</h1>
+                </div>
+                <div class="row g-4 justify-content-center text-center">
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item bg-light rounded">
+                            <!-- <div class="service-img">
+                                <img src="img/service-1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            </div> -->
+                            <div class="service-content text-center p-4">
+                                <div class="service-content-inner">
+                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-lightbulb fa-2x me-2"></i> Services for Students</a>
+                                    <p class="mb-4">We assist you throughout the entire application process, offering support with documentation, essays, and other requirements to help you create a compelling and competitive application.
+                                    </p>
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item bg-light rounded">
+                            <!-- <div class="service-img">
+                                <img src="img/service-2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            </div> -->
+                            <div class="service-content text-center p-4">
+                                <div class="service-content-inner">
+                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-school fa-2x me-2"></i> Services for Universities</a>
+                                    <p class="mb-4">We perform comprehensive market research to help you assess the potential of your programs and courses in various regions, offering insights that support your strategies for international expansion.
+                                    </p>
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item bg-light rounded">
+                            <!-- <div class="service-img">
+                                <img src="img/service-4.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            </div> -->
+                            <div class="service-content text-center p-4">
+                                <div class="service-content-inner">
+                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-bullhorn fa-2x me-2"></i> Services for Partners</a>
+                                    <p class="mb-4">We offer a seamless platform that facilitates collaboration between partner agents and universities, enhancing communication and increasing efficiency for everyone involved.
+                                    </p>
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item bg-light rounded">
+                            <!-- <div class="service-img">
+                                <img src="img/service-3.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            </div> -->
+                            <div class="service-content text-center p-4">
+                                <div class="service-content-inner">
+                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-chalkboard-teacher fa-2x me-2"></i> Services for Community</a>
+                                    <p class="mb-4">We advocate for global education and inclusivity by organizing workshops, cultural exchanges, and community outreach initiatives. Our goal is to connect international students with local communities, thereby enriching their educational experience.
+                                    </p>
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <a class="btn btn-primary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">Services More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services End -->
+
+        <!-- program section -->
+        <div class="container-fluid project">
+            <div class="container my-5">
+                <div class="text-center mb-4">
+                  <h4 class="text-uppercase text-primary">Discover Top Fields of Study</h4>
+                  <h2 class="fw-bold">Popular disciplines among students</h2>
+                </div>
+
+                <div class="row g-4 text-center">
+                  <!-- Engineering Card -->
+                  <div class="col-md-4">
+                    <div class="border rounded-3 p-4 h-100 shadow-sm">
+                      <div class="mb-3">
+                        <i class="bi bi-gear-fill fs-1"></i>
+                      </div>
+                      <h5 class="fw-bold">Engineering</h5>
+                      <p>Electrical and electronics, mechanical engineering, chemical engineering and civil engineering</p>
+                      <button class="btn btn-outline-dark mt-3">Explore <span class="text-primary fw-bold">+</span></button>
+                    </div>
+                  </div>
+
+                  <!-- Business and Management Card -->
+                  <div class="col-md-4">
+                    <div class="border rounded-3 p-4 h-100 shadow-sm">
+                      <div class="mb-3">
+                        <i class="bi bi-briefcase-fill fs-1"></i>
+                      </div>
+                      <h5 class="fw-bold">Business and Management</h5>
+                      <p>Business administration, digital marketing, international business, foreign trade, entrepreneurship</p>
+                      <button class="btn btn-outline-dark mt-3">Explore <span class="text-primary fw-bold">+</span></button>
+                    </div>
+                  </div>
+
+                  <!-- Computer Science Card -->
+                  <div class="col-md-4">
+                    <div class="border rounded-3 p-4 h-100 shadow-sm">
+                      <div class="mb-3">
+                        <i class="bi bi-laptop-fill fs-1"></i>
+                      </div>
+                      <h5 class="fw-bold">Computer Science and IT</h5>
+                      <p>Information systems, software engineering and design, programming languages, artificial intelligence</p>
+                      <button class="btn btn-outline-dark mt-3">Explore <span class="text-primary fw-bold">+</span></button>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="border rounded-3 p-4 h-100 shadow-sm">
+                      <div class="mb-3">
+                        <i class="fas fa-gavel fs-1"></i>
+                      </div>
+                      <h5 class="fw-bold">Law</h5>
+                      <p>Human rights, cyber law, business law, taxation law, corporate law and management</p>
+                      <button class="btn btn-outline-dark mt-3">Explore <span class="text-primary fw-bold">+</span></button>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="border rounded-3 p-4 h-100 shadow-sm">
+                      <div class="mb-3">
+                        <i class="fas fa-microscope fs-1"></i>
+                      </div>
+                      <h5 class="fw-bold">Health & health sciences</h5>
+                      <p>Pharmacy, microbiology, medical lab technology, and biotechnology</p>
+                      <button class="btn btn-outline-dark mt-3">Explore <span class="text-primary fw-bold">+</span></button>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="border rounded-3 p-4 h-100 shadow-sm">
+                      <div class="mb-3">
+                        <i class="bi bi-palette fs-1"></i>
+                      </div>
+                      <h5 class="fw-bold">Arts and Humanities</h5>
+                      <p>Journalism, mass communication, english, geography, history, sociology, political science</p>
+                      <button class="btn btn-outline-dark mt-3">Explore <span class="text-primary fw-bold">+</span></button>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- end program section -->
+        
+        <!-- Testimonial Start -->
+        <div class="container-fluid testimonial bg-light py-5">
+            <div class="container py-5">
+                <div class="row g-4 align-items-center">
+                    <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="h-100 rounded">
+                            <h4 class="text-primary">Our Feedbacks </h4>
+                            <h1 class="display-4 mb-4">Clients are Talking</h1>
+                            <p class="mb-4">As trusted student consultants, we pride ourselves on guiding students through every step of their academic journey abroad. From choosing the right course to visa application support, our personalized services have helped thousands achieve their dreams. Here's what our students have to say about their experience with us.</p>
+                            <!-- <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Read All Reviews <i class="fas fa-arrow-right ms-2"></i></a> -->
+                        </div>
+                    </div>
+                    <div class="col-xl-8">
+                        <div class="testimonial-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="d-flex">
+                                    <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
+                                    <p class="mt-4">The consultants guided me from day one, helping me choose the right course and prepare a strong SOP. I’m now studying in the UK thanks to their amazing support!
+                                    </p>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <div class="my-auto text-end">
+                                        <h5>Person Name</h5>
+                                        <p class="mb-0">Profession</p>
+                                    </div>
+                                    <div class="bg-white rounded-circle ms-3">
+                                        <img src="img/testimonial-1.jpg" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="d-flex">
+                                    <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
+                                    <p class="mt-4">From choosing courses to writing my statement of purpose, their support was invaluable. I’m happily enrolled in my dream program because of their constant encouragement!
+                                    </p>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <div class="my-auto text-end">
+                                        <h5>Person Name</h5>
+                                        <p class="mb-0">Profession</p>
+                                    </div>
+                                    <div class="bg-white rounded-circle ms-3">
+                                        <img src="img/testimonial-2.jpg" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
+                                <div class="d-flex">
+                                    <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
+                                    <p class="mt-4">They helped me craft a compelling SOP and prepared me thoroughly for interviews. Their assistance was key to securing my spot in a top university.
+                                    </p>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <div class="my-auto text-end">
+                                        <h5>Person Name</h5>
+                                        <p class="mb-0">Profession</p>
+                                    </div>
+                                    <div class="bg-white rounded-circle ms-3">
+                                        <img src="img/testimonial-3.jpg" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <img src="img/footer-logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 py-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Explore</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 py-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, London UK</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <div class="d-flex align-items-center">
+                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Student Bridge</a>, All right reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    </body>
+
+</html>

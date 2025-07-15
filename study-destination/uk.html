@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        <meta charset="utf-8">
+        <title>Study Destination - UK</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="../../use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="../../cdn.jsdelivr.net/npm/bootstrap-icons%401.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="../lib/animate/animate.min.css" rel="stylesheet">
+        <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="../css/bootstrap.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../css/style.css" rel="stylesheet">
+        <style>
+            #why-study-in,
+            #cost-of-studying,
+            #scholorship,
+            #visa-requirements,
+            #faq
+            {
+              scroll-margin-top: 5rem;
+              scroll-behavior: smooth;
+            }  
+            .bg-breadcrumb{
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/slider_image2.jpg);
+            }
+            .sidebar {
+              border-right: 1px solid #ddd;
+              /*position: sticky;*/
+              top: 0;
+              height: fit-content;
+            }
+            @media (min-width: 760px) { /* md and above in Bootstrap */
+              .sidebar {
+                position: sticky;
+                top: 0;
+              }
+            }
+            .sidebar a {
+              display: block;
+              padding: 10px 15px;
+              color: #000;
+              text-decoration: none;
+              border-left: 3px solid transparent;
+            }
+            .sidebar a.active {
+              color: #102147;
+              font-weight: bold;
+              border-left: 3px solid #102147;
+            }
+            .sidebar a:hover {
+              background-color: #eaeaea;
+            }
+            .arrow {
+              float: right;
+            }
+            .country-title {
+              font-weight: 700;
+              font-size: 2rem;
+            }
+            .card-img-top {
+              height: 70vh;
+              object-fit: unset;
+            }
+            
+            .city-highlight {
+                color: #44d2f6;
+                font-weight: 600;
+                transition: color 0.3s ease;
+            }
+
+            .city-highlight:hover {
+                color: #102147;
+            }
+
+            .marquee-container {
+              width: 100%;
+              overflow: hidden;
+              padding: 1rem 0;
+            }
+            .marquee-track {
+              display: flex;
+              gap: 3rem;
+              align-items: center;
+              animation: marquee 28s linear infinite;
+              will-change: transform;
+            }
+            .marquee-track img {
+              max-width: 120px;
+              filter: grayscale(40%);
+              opacity: 0.85;
+              transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+              cursor: pointer;
+              user-select: none;
+            }
+            .marquee-track img:hover {
+              filter: grayscale(0%);
+              opacity: 1;
+              transform: scale(1.1);
+            }
+            @keyframes marquee {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            .coursehov {
+                border-radius: 20px;
+                background-color: #102147;
+                color: white;
+                padding: 10px 15px;
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+
+            .coursehov:hover {
+                color: black;
+                background-color: #44d2f6;
+                transform: translateY(-5px) scale(1.03);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            }
+            .opportunity-card {
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .opportunity-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .icon-circle {
+              width: 60px;
+              height: 60px;
+              font-size: 1.5rem;
+              color: #fff;
+              background-color: #44d2f6;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <!-- <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a> -->
+                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+92 333 2715533</a>
+                            <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>info@bridge-student.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark px-3 sticky-top">
+          <div class="container-fluid">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+              <img src="../img/logo.png" alt="Logo" id="navbarLogo">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars text-light"></i>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+              <!-- Menu -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../index.html'>Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../services.html'>Services</a>
+                </li>
+
+                <!-- First-Level Dropdown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Student Destinations
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class='dropdown-item' href='uk.html'>Study in UK</a></li>
+
+                    <!-- Second-Level Dropdown -->
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle" href="#">Study in Europe</a>
+                      <ul class="dropdown-menu">
+                        <li><a class='dropdown-item' href='france.html'>Study in France</a></li>
+                        <li><a class='dropdown-item' href='germany.html'>Study in Germany</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a class='dropdown-item' href='usa.html'>Study in USA</a></li>
+                    <li><a class='dropdown-item' href='australia.html'>Study in Australia</a></li>
+                    <li><a class='dropdown-item' href='canada.html'>Study in Canada</a></li>
+                    <li><a class='dropdown-item' href='ireland.html'>Study in Ireland</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../about-us.html'>About</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../contact-us.html'>Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Resources</a>
+                </li> -->
+              </ul>
+
+              <!-- Right Button -->
+              <a href="https://calendly.com/info-studentbridge" class="btn btn-primary" target="_blank">Book Consultation</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar & Hero End -->
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Study Destination</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href='../index.html'>Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Study Destination</a></li>
+                    <li class="breadcrumb-item active text-primary">UK</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Services Start -->
+        <div class="container-fluid">
+  <div class="row min-vh-100">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 sidebar py-4">
+      <h5 class="px-3 fw-bold">Study Destination UK key Detail</h5>
+      <a href="#why-study-in">Why Study In UK <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#cost-of-studying"> Cost Of Studying In UK <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#scholorship">ScholorShips <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#visa-requirements">Visa Requirements <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#faq">FAQ's <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+    </nav>
+
+    <!-- Content -->
+    <main class="col-md-9 col-lg-10 p-4">
+      <div class="card border-0 mb-4">
+        <img src="../img/sd-uk.jpg" class="card-img-top" alt="UK">
+      </div>
+      <h2 class="country-title">UK</h2>
+      <p>
+        The United Kingdom remains one of the top destinations for international students, offering world-class education through over 160 universities—including Oxford, Cambridge, and Imperial College London. Its globally recognized degrees, flexible course options, and focus on innovation and research make the UK ideal for students pursuing academic excellence and career growth.
+      </p>
+      <p>
+      	With top student cities like London and Edinburgh, the UK offers not only quality education but also strong career support, cultural diversity, and post-study work opportunities through the Graduate Route. Scholarships and funding options are widely available, making it accessible for talented students to turn their global education dreams into reality.
+      </p>
+      <hr>
+      <div id="why-study-in">
+	      <h2>
+	      	Why Study In The UK?
+	      </h2>
+	      <h3>
+	      	World’s Top Ranking Universities Located
+	      </h3>
+	      <p>
+	      	However, with 111 listed institutions, the UK has the highest number of universities relative to its population size. Prestigious universities like Oxford, Cambridge, and Imperial College London consistently rank among the top 10 globally.
+	      </p>
+	      <h3>
+	      	Quality Of Teaching
+	      </h3>
+	      <p>
+	      	The United Kingdom is home to some of the world’s oldest and most prestigious universities—a distinction that’s no coincidence. These institutions are required to meet rigorous national academic standards, overseen by regulatory bodies such as the Office for Students and the Quality Assurance Agency for Higher Education.
+	      </p>
+	      <h3>
+	      	Research Opportunities
+	      </h3>
+	      <p>
+	      	UK universities are at the forefront of global research and innovation, offering students the chance to work on cutting-edge projects using state-of-the-art facilities. Whether your interests lie in the sciences or humanities, there are ample opportunities to engage in meaningful and impactful research.
+	      </p>
+      </div>
+      <hr>
+      <div id="cost-of-studying">
+      	<h2>
+      		Cost Of Studying In UK
+      	</h2>
+      	<p>
+      		Tuition fees in the UK vary depending on the type of degree and the institution you choose. Each university or college sets its own fee structure, with prestigious institutions often having higher costs. These fees represent the core cost of obtaining a UK education.
+      	</p>
+      	<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col" class="bg-dark text-white">Academic Program</th>
+		      <th scope="col" class="bg-dark text-white">Academic Fee</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr class="table-primary">
+		      <td>Undergraduate bachelor’s degree</td>
+		      <td>Between 10,000 and 20,000 GBP annually</td>
+		    </tr>
+		    <tr class="table-primary">
+		      <td>Master's degree for postgraduate study</td>
+		      <td>Between 10,000 and 20,000 GBP annually</td>
+		    </tr>
+		    <tr class="table-primary">
+		      <td>A doctoral degree</td>
+		      <td>Between £15,000 to £24,000 annually</td>
+		    </tr>
+		  </tbody>
+		</table>
+      </div>
+      <hr>
+      <div id="intakes">
+      	<h2>
+      		Intakes In The UK
+      	</h2>
+      	<p>
+      		Colleges and Universities typically offer two main intakes, but many institutions do not provide courses during the summer.
+      	</p>
+      	<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col" class="bg-dark text-white">Intakes</th>
+		      <th scope="col" class="bg-dark text-white">Time</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr class="table-primary">
+		      <td>Fall/Autumn intake</td>
+		      <td>From September until December</td>
+		    </tr>
+		    <tr class="table-primary">
+		      <td>Springtime intake</td>
+		      <td>January to April</td>
+		    </tr>
+		    <tr class="table-primary">
+		      <td>Summertime enrollment</td>
+		      <td>April to June</td>
+		    </tr>
+		  </tbody>
+		</table>
+      </div>
+      <hr>
+      <div id="scholorship">
+      	<h2>
+      		Scholarships For International Students In UK
+      	</h2>
+      	<p>
+      		Studying abroad can be costly, but fortunately, the UK offers a variety of scholarships to help international students offset the expenses. Here’s an overview of some available options to explore:
+      	</p>
+      	<h3>
+      		Chevening Scholarships
+      	</h3>
+      	<p>
+      		These prestigious scholarships, offered by the UK Foreign, Commonwealth & Development Office (FCDO), fund one-year postgraduate taught degrees in any discipline at UK universities.
+      	</p>
+      	<h3>
+      		Scholarships From The Commonwealth For Developing Commonwealth Nations
+      	</h3>
+      	<p>
+      		These scholarships are awarded to students from developing Commonwealth countries to pursue master's and PhD programs across a wide range of disciplines.
+      	</p>
+      	<p>
+      		Most importantly, many UK universities offer merit-based scholarships for both undergraduate and postgraduate international students. These scholarships vary in value—some may cover full tuition, while others offer partial funding. Be sure to explore the scholarship options available on the websites of your chosen universities. You can also book a consultation with us, where we guide students at all levels in finding the right scholarship opportunities to study in the UK.
+      	</p>
+      	<p>
+      		In addition, our strong partnerships with UK institutions and access to a wide range of online resources help eligible students find the scholarships that best support their academic and career goals.
+      	</p>
+      </div>
+      <hr>
+      <div id="visa-requirements">
+      	<h2>
+      		Student Visa Requirements In UK
+      	</h2>
+      	<h3>
+      		Types Of Student Visas
+      	</h3>
+      	<p>
+      		<b>Tier 4 Visa:</b> For full-time academic studies. <br>
+
+			<b>Short-Term Study Visa:</b> For short courses or English language programs.
+      	</p>
+      	<h3>
+      		Visa Application Process
+      	</h3>
+      	<p>
+      		The visa application process includes completing an online application, submitting biometric data, and attending an interview. It's essential to be well-prepared and have all required documents organized and ready.
+      	</p>
+      	<h3>
+      		Required Documentation
+      	</h3>
+      	<p>
+      		Typically, required documents include a valid passport, an official acceptance letter from a UK institution, proof of financial support, and evidence of English language proficiency. Being fully prepared with all necessary documents can help make the visa application process smoother and more efficient.
+      	</p>
+      	<h3>
+      		Post-Study Work Opportunities
+      	</h3>
+      	<p>
+      		The Graduate Route is the official name for the UK’s Post-Study Work (PSW) visa. It allows international graduates to remain in the UK for two or three years—depending on their level of study—after completing their degree. Compared to other visa options, the Graduate Route offers a simpler and more accessible path for staying in the UK legally after graduation. Additionally, it enables employers to hire recent graduates without the financial and regulatory obligations of a sponsorship process.
+      	</p>
+      	<h3>
+      		Schedule A Meeting With Us To Discuss Your Academic Endeavors
+      	</h3>
+      	<p>
+      		If you're feeling overwhelmed by the challenges of your academic journey, Student Bridge is here to support you every step of the way. Schedule a consultation with our experienced advisors to explore your educational goals—whether you're choosing the right program, preparing for exams, or building a strong application. Whether you're aiming for undergraduate or postgraduate studies, our personalized guidance is designed to help you reach your full potential. Take the first step toward success—book your consultation with us today!
+      	</p>
+      </div>
+      <div class="faq" id="faq">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="pb-5">
+                            <h4 class="text-primary">FAQs</h4>
+                            <!-- <h1 class="display-4">Get the Answers to Common Questions</h1> -->
+                        </div>
+                       <div class="accordion bg-light rounded p-4" id="accordionExample">
+                            <div class="accordion-item border-0 mb-4">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseTOne">
+                                        What are the general admission requirements for international students?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body my-2">
+                                        <p>
+                                        	Requirements vary by university and program, but generally include academic transcripts, proof of English proficiency (like IELTS or TOEFL), a personal statement, recommendation letters, and a valid passport.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-4">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Are scholarships available for international students? 
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body my-2">
+                                        <p>
+                                        	Yes, many UK universities offer merit-based scholarships, government-funded awards (like Chevening or Commonwealth), and department-specific funding for eligible students.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-4">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Can I work while studying in the UK?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body my-2">
+                                        <p>
+                                        	Yes, international students on a student visa can work up to 20 hours per week during term time and full-time during holidays.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-0">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        What is the Graduate Route visa (PSW)?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body my-2">
+                                        <p>
+                                        	The Graduate Route allows international students to stay in the UK for 2 years (or 3 years for PhD graduates) after completing their degree, to work or look for work.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <!-- <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                        <div class="faq-img RotateMoveRight rounded">
+                            <img src="img/faq-img.jpg" class="img-fluid rounded w-100" alt="Image">
+                            <a class="faq-btn btn btn-primary rounded-pill text-white py-3 px-5" href="#">Read More Q & A <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
+  </div>
+</div>
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <img src="../img/footer-logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 py-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Explore</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 py-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+                            <a href="#"><i class="fa fa-map-marker-alt me-2"></i> office No 1, 3rd floor, Silver City Plaza, G11 Markaz, Sachal Sarmast road, Islamabad</a>
+                            <a href="#"><i class="fas fa-envelope me-2"></i> info@bridge-student.com</a>
+                            <a href="#"><i class="fas fa-phone me-2"></i> +92 333 2715533</a>
+                            <!-- <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a> -->
+                            <div class="d-flex align-items-center">
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-light btn-md-square me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Student Bridge</a>, All right reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+        <div class="elfsight-app-9941ac13-0e73-4135-84bb-4b2591a07084" data-elfsight-app-lazy></div>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../../cdn.jsdelivr.net/npm/bootstrap%405.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/nav.js"></script>
+    </body>
+</html>

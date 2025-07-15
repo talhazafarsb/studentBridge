@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Investa - Investment Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            .sidebar {
+              border-right: 1px solid #ddd;
+              /*position: sticky;*/
+              top: 0;
+              height: fit-content;
+            }
+            @media (min-width: 760px) { /* md and above in Bootstrap */
+              .sidebar {
+                position: sticky;
+                top: 0;
+              }
+            }
+            .sidebar a {
+              display: block;
+              padding: 10px 15px;
+              color: #000;
+              text-decoration: none;
+              border-left: 3px solid transparent;
+            }
+            .sidebar a.active {
+              color: #102147;
+              font-weight: bold;
+              border-left: 3px solid #102147;
+            }
+            .sidebar a:hover {
+              background-color: #eaeaea;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
+                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                            <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark px-3 sticky-top">
+          <div class="container-fluid">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+              <img src="img/logo.png" alt="Logo" id="navbarLogo">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+              <!-- Menu -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">Services</a>
+                </li>
+
+                <!-- First-Level Dropdown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Student Destinations
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class="dropdown-item" href="#">Study in UK</a></li>
+
+                    <!-- Second-Level Dropdown -->
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle" href="#">Study in Europe</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Study in France</a></li>
+                        <li><a class="dropdown-item" href="#">Study in Germany</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Study in USA</a></li>
+                    <li><a class="dropdown-item" href="#">Study in Australia</a></li>
+                    <li><a class="dropdown-item" href="#">Study in Canada</a></li>
+                    <li><a class="dropdown-item" href="#">Study in Ireland</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Resources</a>
+                </li> -->
+              </ul>
+
+              <!-- Right Button -->
+              <a href="#" class="btn btn-primary">Book Consultation</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Services</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active text-primary">Services</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+        <!-- main start -->
+        <div class="container-fluid">
+          <div class="row min-vh-100">
+            <!-- Sidebar -->
+            <!-- <nav class="col-md-3 col-lg-2 sidebar py-4">
+              <h5 class="px-3 fw-bold">Study Destinations</h5>
+              <a href="usa.html">USA <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href="australia.html">Australia <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href="france.html">France <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href="uk.html">UK <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href="canada.html">Canada <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href="ireland.html"  class="active">Ireland <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+            </nav> -->
+
+            <!-- Content -->
+            <main class="col-md-9 col-lg-10 p-4">
+                <div id="course-university-selection-services">
+                    <h2>
+                        Course & University Selection Services
+                    </h2>
+                    <p>
+                        We help students make informed and confident decisions about their academic future by offering tailored guidance in selecting the right course and university that aligns with their interests, strengths, and long-term goals.
+                    </p>
+                    <h3>
+                        Our services include:
+                    </h3>
+                    <ul>
+                        <li>
+                            <h4>
+                                Personalized Academic Profiling:   
+                            </h4>
+                            <p>
+                                In-depth analysis of academic history, career goals, subject interests, and future aspirations.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Course Matching & Recommendations:
+                            </h4>
+                            <p>
+                                Identifying the most suitable undergraduate or postgraduate courses based on aptitude, demand, and future career prospects.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                University Shortlisting:
+                            </h4>
+                            <p>
+                                Recommending top UK universities that best fit the student’s academic profile, budget, and preferences (location, ranking, scholarships, etc.).
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Entry Requirement Review:
+                            </h4>
+                            <p>
+                                Evaluating eligibility based on academic records, language proficiency, and other admission criteria.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Career Outlook Analysis:
+                            </h4>
+                            <p>
+                                Insight into the employability and industry relevance of chosen courses.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Parent & Student Counselling:
+                            </h4>
+                            <p>
+                                One-on-one sessions to guide families in making balanced and strategic decisions.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Support for UCAS & Direct Applications:
+                            </h4>
+                            <p>
+                                Guidance on selecting course combinations for UCAS and understanding university-specific application processes.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="university-application-support-services">
+                    <h2>
+                        University Application Support Services
+                    </h2>
+                    <p>
+                        Once students have selected their desired course and university, we provide end-to-end assistance to ensure a smooth, accurate, and timely application process.
+                    </p>
+                    <h3>
+                        Our services include:
+                    </h3>
+                    <ul>
+                        <li>
+                            <h4>
+                                Application Planning & Timeline Management:
+                            </h4>
+                            <p>
+                                Creating a personalised application roadmap aligned with university deadlines and entry requirements.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Form Filling & Submission Support:
+                            </h4>
+                            <p>
+                                Step-by-step guidance for completing UCAS or direct university application forms accurately and professionally.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Documentation Assessment & Verification:
+                            </h4>
+                            <p>
+                                Reviewing academic transcripts, certificates, reference letters, personal statements, and English language test results to ensure compliance with university requirements.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Document Vetting & Formatting:
+                            </h4>
+                            <p>
+                                Ensuring all documents are appropriately formatted, translated (if needed), and meet institutional standards.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Personal Statement & SOP Review:
+                            </h4>
+                            <p>
+                                Providing feedback and editing support to strengthen the student’s personal statement or Statement of Purpose.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Liaising with Universities:
+                            </h4>
+                            <p>
+                                Communicating with university admissions teams to resolve queries, track application progress, and provide updates to students.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Application Fee Guidance:
+                            </h4>
+                            <p>
+                                Advising students on payment of application fees, including support with any fee waivers where applicable.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Follow-Up and Offer Management:
+                            </h4>
+                            <p>
+                                Monitoring application status, assisting with conditional/unconditional offer letters, and advising on next steps.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Appeals & Reapplications (if needed):
+                            </h4>
+                            <p>
+                                Guidance in cases of application rejection or deferral, including strategic reapplication support.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="student-visa-application-support">
+                    <h2>
+                        Student Visa Application Support
+                    </h2>
+                    <p>
+                        We provide end-to-end assistance for student visa applications to leading international study destinations including the UK, Europe, Canada, Australia, and the US. Our expert team ensures students understand the process, meet requirements, and submit strong, error-free applications.
+                    </p>
+                    <h3>
+                        Our services include:
+                    </h3>
+                    <ul>
+                        <li>
+                            <h4>
+                                Visa Process Guidance:
+                            </h4>
+                            <p>
+                                Clear explanation of the student visa process for each country, including visa types, eligibility, timelines, and key steps.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Document Checklist & Evaluation:
+                            </h4>
+                            <p>
+                                Country-specific documentation guidance with thorough review and vetting of academic, financial, and personal documents required for visa approval.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Application Form Assistance:
+                            </h4>
+                            <p>
+                                Step-by-step support in completing visa application forms accurately for each destination, minimising risks of delay or rejection.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Financial Proof Preparation:
+                            </h4>
+                            <p>
+                                Guidance on meeting financial requirements (bank statements, sponsorships, education loans, etc.) and presenting them in the required format.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                CAS/I-20/LOA Review:
+                            </h4>
+                            <p>
+                                Support in obtaining and reviewing key documents such as the Confirmation of Acceptance for Studies (UK), I-20 (US), or Letter of Acceptance (Canada, Australia, EU), ensuring alignment with visa forms.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Biometrics & Appointment Booking:
+                            </h4>
+                            <p>
+                                Assistance with scheduling appointments for biometrics, visa interviews, and document submission at the appropriate visa application centres.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Visa Fee & Health Insurance Payments:
+                            </h4>
+                            <p>
+                                Support in completing payments for visa fees, immigration health surcharges, and mandatory insurance (where applicable).
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Interview Preparation (if required):
+                            </h4>
+                            <p>
+                                Coaching and mock interview sessions for countries that require a visa interview, such as the US or UK (credibility interview).
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Application Tracking & Updates:
+                            </h4>
+                            <p>
+                                Monitoring application status and timelines, providing regular updates, and advising on next steps post-decision.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Post-Visa Guidance:
+                            </h4>
+                            <p>
+                                Advising students on travel readiness, visa conditions, BRP/permit collection, and compliance with immigration rules upon arrival.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="course-university-selection-services">
+                    <h2>
+                        Pre-Departure Support Services
+                    </h2>
+                    <h3>
+                        Helping Pakistani Students Prepare for a Smooth Transition Abroad
+                    </h3>
+                    <p>
+                        Our pre-departure services ensure that students are fully prepared—academically, emotionally, and logistically—for life in their new country. We equip students and their families with the information, tools, and confidence needed for a successful start to their international education journey.
+                    </p>
+                    <h3>
+                        Key Services Offered:
+                    </h3>
+                    <ul>
+                        <li>
+                            <h4>
+                                Comprehensive Pre-Departure Briefing:
+                            </h4>
+                            <p>
+                                Country-specific orientation covering culture, laws, academic expectations, daily life, and student responsibilities.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Customized Packing Checklist:
+                            </h4>
+                            <p>
+                                Detailed checklist for essential items to carry (clothing, electronics, documents, toiletries, cultural items), including weather-based guidance for each country.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                University Arrival Guide:
+                            </h4>
+                            <p>
+                                Information about campus facilities, registration process, orientation week, student unions, and academic support services.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Accommodation Assistance:
+                            </h4>
+                            <p>
+                                Final guidance on selecting, securing, and understanding tenancy agreements for on-campus or private housing.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Travel & Transit Guidance:
+                            </h4>
+                            <p>
+                                Tips on booking flights, airport navigation, baggage rules, customs procedures, and transit guidelines.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Vaccination & Health Advice:
+                            </h4>
+                            <p>
+                                Country-specific vaccination requirements and general health precautions, along with travel insurance recommendations.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Currency & Banking Setup:
+                            </h4>
+                            <p>
+                                Advice on opening international student bank accounts, carrying foreign currency, and using cards abroad.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Emergency Contact & Helpline Setup:
+                            </h4>
+                            <p>
+                                Providing students and parents with a 24/7 emergency contact line and essential embassy/university numbers.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="exclusive-post-arrival-support-services">
+                    <p>
+                        <b>Having a strong foothold in the UK,</b> We are proud to be one of the very few <b>student consultancy</b> offering a dedicated <b>post-arrival support programme</b> for students arriving in the UK.
+                    </p>
+                    <h3>
+                        Our unique post-arrival services include:
+                    </h3>
+                    <ul>
+                        <li>
+                            <h4>
+                                University Enrolment Support
+                            </h4>
+                            <p>
+                                We help you complete the registration process, collect your student ID, and understand how to access university resources—ensuring a strong academic start.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Local Bank Account Assistance
+                            </h4>
+                            <p>
+                                Get expert guidance on opening a bank account in your destination country, including help with document preparation and selecting student-friendly banks.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Accommodation Essentials Checklist
+                            </h4>
+                            <p>
+                                We provide a complete checklist of what you’ll need to set up your room or apartment, with guidance on where to shop for affordable and essential items.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Public Transport & City Navigation Help
+                            </h4>
+                            <p>
+                                Learn how to get around your new city efficiently, including applying for student travel cards, using public transport apps, and understanding local routes.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Health Services Registration Guidance
+                            </h4>
+                            <p>
+                                We assist you in registering with local healthcare providers (GP’s, NHS) so you can access medical care when needed.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Local SIM Card & Connectivity Setup
+                            </h4>
+                            <p>
+                                Get connected fast with our help in selecting the best mobile networks, data plans, and SIM options for your needs and budget.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Smart Budgeting & Financial Tips
+                            </h4>
+                            <p>
+                                We offer practical advice on managing your expenses abroad, including budgeting tools, student discounts, and tips on using bank accounts and remittance services.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                Part-Time Work Preparation
+                            </h4>
+                            <p>
+                                Providing students and parents with a 24/7 emergency contact line and essential embassy/university numbers.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </main> 
+          </div>
+        </div>
+
+        <!-- main end -->
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <img src="img/logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Explore</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, London UK</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <div class="d-flex align-items-center">
+                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    </body>
+
+</html>

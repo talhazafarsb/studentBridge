@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        <meta charset="utf-8">
+        <title>Study Destination - France</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="../../use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="../../cdn.jsdelivr.net/npm/bootstrap-icons%401.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="../lib/animate/animate.min.css" rel="stylesheet">
+        <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="../css/bootstrap.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../css/style.css" rel="stylesheet">
+        <style>
+            #info,
+            #study-in,
+            #admission-requirements,
+            #study-cost,
+            #scholorships,
+            #visa-requirements,
+            #post-study-work,
+            #schedule-meeting,
+            #faq
+            {
+              scroll-margin-top: 5rem;
+              scroll-behavior: smooth;
+            }
+            .bg-breadcrumb{
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/slider_image2.jpg);
+            }
+            .sidebar {
+              border-right: 1px solid #ddd;
+              /*position: sticky;*/
+              top: 0;
+              height: fit-content;
+            }
+            @media (min-width: 760px) { /* md and above in Bootstrap */
+              .sidebar {
+                position: sticky;
+                top: 0;
+              }
+            }
+            .sidebar a {
+              display: block;
+              padding: 10px 15px;
+              color: #000;
+              text-decoration: none;
+              border-left: 3px solid transparent;
+            }
+            .sidebar a.active {
+              color: #102147;
+              font-weight: bold;
+              border-left: 3px solid #102147;
+            }
+            .sidebar a:hover {
+              background-color: #eaeaea;
+            }
+            .arrow {
+              float: right;
+            }
+            .country-title {
+              font-weight: 700;
+              font-size: 2rem;
+            }
+            .card-img-top {
+              height: 70vh;
+              object-fit: unset;
+            }
+            
+            .city-highlight {
+                color: #44d2f6;
+                font-weight: 600;
+                transition: color 0.3s ease;
+            }
+
+            .city-highlight:hover {
+                color: #102147;
+            }
+
+            .marquee-container {
+              width: 100%;
+              overflow: hidden;
+              padding: 1rem 0;
+            }
+            .marquee-track {
+              display: flex;
+              gap: 3rem;
+              align-items: center;
+              animation: marquee 28s linear infinite;
+              will-change: transform;
+            }
+            .marquee-track img {
+              max-width: 120px;
+              filter: grayscale(40%);
+              opacity: 0.85;
+              transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+              cursor: pointer;
+              user-select: none;
+            }
+            .marquee-track img:hover {
+              filter: grayscale(0%);
+              opacity: 1;
+              transform: scale(1.1);
+            }
+            @keyframes marquee {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            .coursehov {
+                border-radius: 20px;
+                background-color: #102147;
+                color: white;
+                padding: 10px 15px;
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+
+            .coursehov:hover {
+                color: black;
+                background-color: #44d2f6;
+                transform: translateY(-5px) scale(1.03);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            }
+            .opportunity-card {
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .opportunity-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .icon-circle {
+              width: 60px;
+              height: 60px;
+              font-size: 1.5rem;
+              color: #fff;
+              background-color: #44d2f6;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <!-- <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a> -->
+                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+92 333 2715533</a>
+                            <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>info@bridge-student.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark px-3 sticky-top">
+          <div class="container-fluid">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+              <img src="../img/logo.png" alt="Logo" id="navbarLogo">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars text-light"></i>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+              <!-- Menu -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../index.html'>Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../services.html'>Services</a>
+                </li>
+
+                <!-- First-Level Dropdown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Student Destinations
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class='dropdown-item' href='uk.html'>Study in UK</a></li>
+
+                    <!-- Second-Level Dropdown -->
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle" href="#">Study in Europe</a>
+                      <ul class="dropdown-menu">
+                        <li><a class='dropdown-item' href='france.html'>Study in France</a></li>
+                        <li><a class='dropdown-item' href='germany.html'>Study in Germany</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a class='dropdown-item' href='usa.html'>Study in USA</a></li>
+                    <li><a class='dropdown-item' href='australia.html'>Study in Australia</a></li>
+                    <li><a class='dropdown-item' href='canada.html'>Study in Canada</a></li>
+                    <li><a class='dropdown-item' href='ireland.html'>Study in Ireland</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../about-us.html'>About</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../contact-us.html'>Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Resources</a>
+                </li> -->
+              </ul>
+
+              <!-- Right Button -->
+              <a href="https://calendly.com/info-studentbridge" class="btn btn-primary" target="_blank">Book Consultation</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Study Destination</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href='../index.html'>Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Study Destination</a></li>
+                    <li class="breadcrumb-item active text-primary">France</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Services Start -->
+        <div class="container-fluid">
+  <div class="row min-vh-100">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 sidebar py-4">
+      <h5 class="px-3 fw-bold">Study Destination France key Detail</h5>
+      <a href="#info"> Overview <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#study-in">Study in France <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#admission-requirements">Admission Requirements <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#study-cost">Cost of Study <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#scholorships">Scholorships <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#visa-requirements"> Visa Requirements <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#post-study-work"> Post-Study Work Opportunities <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#schedule-meeting"> Schedule A Meeting <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#faq"> FAQ's <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+    </nav>
+
+    <!-- Content -->
+    <main class="col-md-9 col-lg-10 p-4">
+      <div class="card border-0 mb-4">
+        <img src="../img/sd-france.png" class="card-img-top" alt="france">
+      </div>
+      <div id="info">
+          <h2 class="country-title">France</h2>
+          <p>
+            France is celebrated for its rich cultural heritage, historical significance, and outstanding academic reputation, making it a top choice for international students. With prestigious institutions, a diverse range of study programmes, and comparatively low tuition costs, France provides a distinctive and rewarding educational journey. Whether you're interested in engineering, business, or the arts, the country boasts some of the world’s leading universities and specialised schools.
+          </p>
+          <hr>
+      </div>
+      <div id="study-in">
+          <h2>
+              Study in France
+          </h2>
+          <p>
+              France boasts one of the largest and most prestigious higher education systems in Europe, with several universities consistently ranking high globally. Renowned institutions like École Normale Supérieure, École Polytechnique, Pierre and Marie Curie University, and the University of Paris-Sud highlight its academic excellence.
+          </p>
+          <p>
+              With its dynamic student life, rich culture, world-famous cuisine, and beautiful architecture, France offers an ideal setting for international studies. Studying there not only broadens your cultural perspective but also provides an opportunity to learn the French language. French universities offer flexible course options, allowing students to study full-time or part-time, with schedules varying by institution.
+          </p>
+      </div>
+      <div id="admission-requirements">
+          <h2>
+              Admission Requirements
+          </h2>
+          <p>
+              Admission requirements for studying in France differ based on the institution, level of study (undergraduate or graduate), and your nationality (EU/EEA vs. non-EU/EEA). Below is a general outline of the typical steps and documents required for non-EU/EEA students:
+          </p>
+          <h4>
+              Choose Your Program:
+          </h4>
+          <p>
+              Explore universities and programs that match your academic goals and interests.
+          </p>
+          <h4>
+              Check Eligibility:
+          </h4>
+          <p>
+              Make sure you meet the basic eligibility criteria for your selected program, such as required academic qualifications (e.g., a high school diploma or equivalent) and any subject-specific prerequisites.
+          </p>
+          <h4>
+              Apply for the DAP (Demande admission Préalable):
+          </h4>
+          <p>
+              This is a mandatory pre-admission application for most non-EU/EEA students applying to Bachelor's or Master's programs in France. The application must be submitted via the "Mes Services" platform on the Campus France website.
+          </p>
+          <h2>
+              Application Documents:
+          </h2>
+          <div class="row">
+              <div class="col-md-6">
+                <ul style="list-style: none;">
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Completed Online Application Form
+                    </li>
+                    <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Standardized Test Scores (if required)</li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Passport Copy
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Letter of Recommendation
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Financial Guarantee
+                    </li>
+                </ul>  
+              </div>
+              <div class="col-md-6">
+                  <ul style="list-style: none;">
+                    <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Official transcripts</li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Proof of English or French Language Proficiency
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Motivation Letter
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Portfolio
+                    </li>
+                </ul>
+              </div>
+          </div>
+      </div>
+      <div id="study-cost">
+          <h2>
+              Cost of Study
+          </h2>
+          <p>
+              France offers a high-quality education at an affordable cost, especially at public universities. Citizens and permanent residents of EEA countries and Switzerland can study at public institutions tuition-free, aside from a small annual registration fee of around 200 euros.
+          </p>
+          <p>
+              For non-European students, tuition at public universities typically ranges from 3,000 to 4,000 euros per year, while private institutions may charge up to 20,000 euros annually. Depending on the program, non-EU students may pay between 170 and 650 euros per year at public universities. Living expenses are also reasonable, with monthly student budgets estimated at 850–1,000 euros in cities like Toulouse, Lyon, or Bordeaux. However, Paris is more expensive, with costs ranging from 1,250 to 1,400 euros per month. Smaller towns often offer even lower living expenses.
+          </p>
+      </div>
+      <div id="scholorships">
+          <h2>
+              Scholorships
+          </h2>
+          <p>
+              Studying in France comes with numerous benefits, especially when paired with the country’s renowned educational institutions and academic opportunities. To make higher education more accessible, a variety of financial aid options are available for students planning to study in France.
+          </p>
+          <p>
+              Eligible students can apply for grants and loans, and the French government also subsidizes a portion of university tuition, making it a financially smart choice. Additionally, France’s tuition fees are significantly lower compared to many other countries. International students can also take advantage of scholarships offered by French public institutions and the Erasmus+ program to support their studies in France and across Europe.
+          </p>
+      </div>
+      <div id="visa-requirements">
+          <h2>
+              Student Visa Requirements
+          </h2>
+          <div class="row">
+              <div class="col-md-6">
+                <ul style="list-style: none;">
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Valid passport
+                    </li>
+                    <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Visa application form</li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;An EEF number
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Proof of residency in France
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Proof of paid visa application fee
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Proof of temporary accommodation in France
+                    </li>
+                </ul>  
+              </div>
+              <div class="col-md-6">
+                  <ul style="list-style: none;">
+                    <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Passport photograph</li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;University acceptance letter
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;An EEF admission certificate
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Proof of medical insurance
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Proof of sufficient funds for stay in France
+                    </li>
+                </ul>
+              </div>
+          </div>
+      </div>
+      <div id="post-study-work">
+          <h2>
+              Post-Study Work Opportunities
+          </h2>
+          <p>
+              International graduates have various employment opportunities in France, and depending on your home country, you may not need a temporary residence permit. To stay in France after graduation, students must have paid employment, which then allows them to apply for a residency permit—this applies to both undergraduate and graduate students.
+          </p>
+          <p>
+              If a non-EU graduate is not employed, they can apply for a temporary residence permit known as Autorisation Provisoire de Séjour. Additionally, international students are allowed to work at their university during their studies. These jobs are scheduled around classes, helping students gain valuable work experience while managing their academic commitments.
+          </p>
+      </div>
+      <div id="schedule-meeting">
+          <h2>
+              Schedule A Meeting
+          </h2>
+          <p>
+              If you're feeling overwhelmed by the challenges of your academic journey, Student Bridge is here to support you every step of the way. Schedule a consultation with our experienced advisors to explore your educational goals—whether you're choosing the right program, preparing for exams, or building a strong application. Whether you're aiming for undergraduate or postgraduate studies, our personalized guidance is designed to help you reach your full potential. Take the first step toward success—book your consultation with us today!
+          </p>
+      </div>
+      <div class="faq" id="faq">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="pb-5">
+                            <h4 class="text-primary">FAQs</h4>
+                            <!-- <h1 class="display-4">Get the Answers to Common Questions</h1> -->
+                        </div>
+                       <div class="accordion bg-light rounded p-4" id="accordionExample">
+                            <div class="accordion-item border-0 mb-4">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseTOne">
+                                        What are the basic admission requirements to study in France as an international student?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body my-2">
+                                        <p>
+                                            Admission requirements vary by program and institution, but generally include a completed application form, academic transcripts, proof of English or French language proficiency, a valid passport, a motivation letter, recommendation letters, and financial proof. Non-EU/EEA students may also need to apply through Campus France and complete the Demande d’Admission Préalable (DAP).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-4">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How much does it cost to study and live in France as a non-EU student?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body my-2">
+                                        <p>
+                                            Tuition for non-EU students at public universities typically ranges from 3,000 to 4,000 EUR per year, while private institutions may charge up to 20,000 EUR. Monthly living costs vary by city, averaging 850–1,000 EUR in cities like Lyon or Bordeaux and 1,250–1,400 EUR in Paris.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-4">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Are scholarships available for international students in France?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body my-2">
+                                        <p>
+                                            Yes, international students can apply for various scholarships offered by French public institutions and programs like Erasmus+. These scholarships can cover part of tuition fees and living expenses, making education in France more affordable.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-0">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Can international students work in France during and after their studies?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body my-2">
+                                        <p>
+                                            Yes, international students are allowed to work part-time during their studies, including on-campus jobs. After graduation, students with paid employment can apply for a residency permit. Unemployed graduates from non-EU countries may apply for a temporary residence permit (Autorisation Provisoire de Séjour) to seek work.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+  </div>
+</div>
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <img src="../img/footer-logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 py-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Explore</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 py-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+                            <a href="#"><i class="fa fa-map-marker-alt me-2"></i> office No 1, 3rd floor, Silver City Plaza, G11 Markaz, Sachal Sarmast road, Islamabad</a>
+                            <a href="#"><i class="fas fa-envelope me-2"></i> info@bridge-student.com</a>
+                            <a href="#"><i class="fas fa-phone me-2"></i> +92 333 2715533</a>
+                            <!-- <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a> -->
+                            <div class="d-flex align-items-center">
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-light btn-md-square me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Student Bridge</a>, All right reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+        <div class="elfsight-app-9941ac13-0e73-4135-84bb-4b2591a07084" data-elfsight-app-lazy></div>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../../cdn.jsdelivr.net/npm/bootstrap%405.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/nav.js"></script>
+    </body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        <meta charset="utf-8">
+        <title>Study Destination - Canada</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="../../use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="../../cdn.jsdelivr.net/npm/bootstrap-icons%401.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="../lib/animate/animate.min.css" rel="stylesheet">
+        <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="../css/bootstrap.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../css/style.css" rel="stylesheet">
+        <style>
+            #info,
+            #education-system,
+            #top-universities,
+            #top-courses,
+            #cost-of-studying,
+            #visa-process,
+            #scholorship,
+            #work-opportunities
+            {
+              scroll-margin-top: 5rem;
+              scroll-behavior: smooth;
+            }
+            .bg-breadcrumb{
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/slider_image2.jpg);
+            }
+            .sidebar {
+              border-right: 1px solid #ddd;
+              /*position: sticky;*/
+              top: 0;
+              height: fit-content;
+            }
+            @media (min-width: 760px) { /* md and above in Bootstrap */
+              .sidebar {
+                position: sticky;
+                top: 0;
+              }
+            }
+            .sidebar a {
+              display: block;
+              padding: 10px 15px;
+              color: #000;
+              text-decoration: none;
+              border-left: 3px solid transparent;
+            }
+            .sidebar a.active {
+              color: #102147;
+              font-weight: bold;
+              border-left: 3px solid #102147;
+            }
+            .sidebar a:hover {
+              background-color: #eaeaea;
+            }
+            .arrow {
+              float: right;
+            }
+            .country-title {
+              font-weight: 700;
+              font-size: 2rem;
+            }
+            .card-img-top {
+              height: 70vh;
+              object-fit: unset;
+            }
+            
+            .city-highlight {
+                color: #44d2f6;
+                font-weight: 600;
+                transition: color 0.3s ease;
+            }
+
+            .city-highlight:hover {
+                color: #102147;
+            }
+
+            .marquee-container {
+              width: 100%;
+              overflow: hidden;
+              padding: 1rem 0;
+            }
+            .marquee-track {
+              display: flex;
+              gap: 3rem;
+              align-items: center;
+              animation: marquee 28s linear infinite;
+              will-change: transform;
+            }
+            .marquee-track img {
+              max-width: 120px;
+              filter: grayscale(40%);
+              opacity: 0.85;
+              transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+              cursor: pointer;
+              user-select: none;
+            }
+            .marquee-track img:hover {
+              filter: grayscale(0%);
+              opacity: 1;
+              transform: scale(1.1);
+            }
+            @keyframes marquee {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            .coursehov {
+                border-radius: 20px;
+                background-color: #102147;
+                color: white;
+                padding: 10px 15px;
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+
+            .coursehov:hover {
+                color: black;
+                background-color: #44d2f6;
+                transform: translateY(-5px) scale(1.03);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            }
+            .opportunity-card {
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .opportunity-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .icon-circle {
+              width: 60px;
+              height: 60px;
+              font-size: 1.5rem;
+              color: #fff;
+              background-color: #44d2f6;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <!-- <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a> -->
+                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+92 333 2715533</a>
+                            <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>info@bridge-student.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark px-3 sticky-top">
+          <div class="container-fluid">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+              <img src="../img/logo.png" alt="Logo" id="navbarLogo">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars text-light"></i>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+              <!-- Menu -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../index.html'>Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../services.html'>Services</a>
+                </li>
+
+                <!-- First-Level Dropdown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Student Destinations
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class='dropdown-item' href='uk.html'>Study in UK</a></li>
+
+                    <!-- Second-Level Dropdown -->
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle" href="#">Study in Europe</a>
+                      <ul class="dropdown-menu">
+                        <li><a class='dropdown-item' href='france.html'>Study in France</a></li>
+                        <li><a class='dropdown-item' href='germany.html'>Study in Germany</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a class='dropdown-item' href='usa.html'>Study in USA</a></li>
+                    <li><a class='dropdown-item' href='australia.html'>Study in Australia</a></li>
+                    <li><a class='dropdown-item' href='canada.html'>Study in Canada</a></li>
+                    <li><a class='dropdown-item' href='ireland.html'>Study in Ireland</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../about-us.html'>About</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../contact-us.html'>Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Resources</a>
+                </li> -->
+              </ul>
+
+              <!-- Right Button -->
+              <a href="https://calendly.com/info-studentbridge" target="_blank" class="btn btn-primary">Book Consultation</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Study Destination</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href='../index.html'>Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Study Destination</a></li>
+                    <li class="breadcrumb-item active text-primary">Canada</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Services Start -->
+        <div class="container-fluid">
+  <div class="row min-vh-100">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 sidebar py-4">
+      <h5 class="px-3 fw-bold">Study Destination Canada key Detail</h5>
+      <a href="#info">Overview <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#education-system">Education System in Canada <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#top-universities">Top Universities <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#top-courses">Top Courses <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#cost-of-studying"> Cost of Studying <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#visa-process">Visa Process <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#scholorship"> Top Scholorships <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href="#work-opportunities"> Work Opportunities <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+    </nav>
+
+    <!-- Content -->
+    <main class="col-md-9 col-lg-10 p-4">
+      <div class="card border-0 mb-4">
+        <img src="../img/sd-canada.jpg" class="card-img-top" alt="Canada">
+      </div>
+      <h2 class="country-title" id="info">Canada</h2>
+      <p>
+        Canada consistently welcomes international students and is home to a wide range of globally recognized educational institutions. According to the Higher Education 2020 rankings, seven Canadian universities are listed among the world’s top 200. In 2018, more than 570,000 international students were enrolled in Canadian institutions, with the majority coming from countries such as India, China, South Korea, and France. This growing trend has led to a significant rise in the number of Indian students choosing Canada for their higher education, with a 16% increase in 2018 alone.
+      </p>
+      <p>
+        For personalized guidance on studying in Canada, contact the expert study abroad consultants at Gateway International. They provide professional support to help you reach your academic goals and turn your dream of studying in Canada into reality.
+      </p>
+      <hr>
+      
+      <h2 id="education-system">Education System in Canada</h2>
+      <p>
+          Canada’s education system is globally respected for its high academic standards and innovative teaching methods. It offers a wide range of programs at colleges and universities, including diplomas, bachelor's, master's, and doctoral degrees. Institutions emphasize research, practical learning, and multicultural inclusion, making it an ideal destination for international students.
+      </p>
+      <ol>
+          <li>
+            Universities
+              <ul>
+                  <li>
+                      Canadian universities mainly offer degree programs at both undergraduate and postgraduate levels. Alongside these, they also provide postgraduate diplomas and certificates, typically lasting up to one year. Canada is a leading choice for international students, with India ranking among the top two countries contributing to student enrolment.
+                  </li>
+              </ul>
+          </li>
+          <li>
+            Colleges
+              <ul>
+                  <li>
+                      Colleges in Canada, often known as community colleges, institutes of technology, or colleges of applied arts, specialize in applied technical education. They provide practical, hands-on training across a wide range of technical and vocational fields.
+                  </li>
+              </ul>
+          </li>
+      </ol>
+      <p>
+          Canadian universities provide a diverse selection of study abroad programs, including master’s and doctoral degrees. Let’s explore the different types of programs available at universities and colleges across Canada.
+      </p>
+      <div class="row" style="margin-top: 5vh;">
+          <div class="container mt-4">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th class="bg-dark text-light">Programs Offered By Colleges</th>
+                <th class="bg-dark text-light">Key Highlights Study in Canada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Associate Degree</td>
+                <td>
+                    <ul>
+                        <li>Required credits: 60</li>
+                        <li>Common subjects: Business, Science</li>
+                    </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Certificate Programs</td>
+                <td>
+                    These programmes equip students with technical skills and knowledge to prepare them for entry-level employment.
+                </td>
+              </tr>
+              <tr>
+                <td>Applied Degree</td>
+                <td>
+                    Applied degrees are designed to meet industry needs and develop analytical skills. Fields of study include International Business, Automotive Management, Hospitality, and more.
+                </td>
+              </tr> 
+              <tr>
+                <td>Diploma</td>
+                <td>
+                    The Diploma programme is tailored to technical fields, vocational disciplines, and various trades. These programmes often include internships or apprenticeships. A diploma may also provide a pathway to a bachelor’s degree abroad.
+                </td>
+              </tr>          
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p>
+          Canadian universities provide a diverse selection of study abroad programs, including master’s and doctoral degrees. Let’s explore the different types of programs available at universities and colleges across Canada.
+      </p>
+      <hr>
+      <h2 id="top-universities">Top Universities for Studying Abroad in Canada</h2>
+      <p>
+          In Canadian universities, there is an emphasis on a job-oriented curriculum, which ensures that you will be able to find employment quickly.
+      </p>
+      <div class="marquee-container" aria-label="Brand logos marquee" role="region">
+          <div class="marquee-track" aria-live="off" aria-atomic="true">
+            <img src="../img/universities/canada/1.jpg" alt="University 1" />
+            <img src="../img/universities/canada/2.jpg" alt="University 2" />
+            <img src="../img/universities/canada/3.jpg" alt="University 3" />
+            <img src="../img/universities/canada/4.jpg" alt="University 4" />
+            <img src="../img/universities/canada/5.jpg" alt="University 5" />
+            <img src="../img/universities/canada/6.jpg" alt="University 6" />
+            <img src="../img/universities/canada/7.jpg" alt="University 7" />
+            <img src="../img/universities/canada/8.jpg" alt="University 8" />
+            <img src="../img/universities/canada/9.jpg" alt="University 9" />
+            <img src="../img/universities/canada/10.jpg" alt="University 10" />
+          </div>
+      </div><br>
+      <p>&nbsp</p>
+      <h2 id="top-courses">Top Courses to Study in Canada</h2>
+      <p>
+          Among the most popular courses for students planning to study in Canada are Bachelor's and Master’s degrees in Engineering, as well as MBAs. Based on insights from our Canada study abroad consultancy, international students frequently choose programs in MBA, Marketing, Finance, and Human Resources. These courses offer a strong combination of academic excellence, practical experience, and international exposure, making them an attractive option for higher education in Canada.
+      </p>
+      <p>
+          Below are some of the most popular courses chosen by students in Canada:
+      </p>
+      <div class="row">
+          <div class="col-md-6">
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Engineering (Various specialisations like Civil, Mechanical, Electrical, Software)</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Business Administration (MBA)</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Computer Science and IT</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Marketing</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Finance</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Human Resources
+</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Medicine and Healthcare
+</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Nursing</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Law</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Education</span></p>
+          </div>
+          <div class="col-md-6">
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Psychology</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Environmental Science
+</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Hospitality and Tourism Management
+</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Accounting</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Media and Communication
+</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Arts and Design
+</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Social Sciences
+</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> International Relations
+</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Architecture</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Agricultural Science
+</span></p>
+              <p><span class="city-highlight"><i class="fas fa-arrow-circle-right"></i> Biotechnology
+</span></p>
+          </div>
+      </div>
+      <p>
+          These programs are well-respected for their academic excellence and the valuable opportunities they offer international students for both learning and career growth.
+      </p>
+      <p>&nbsp;</p>
+      <h2 id="cost-of-studying">Cost of Studying in Canada</h2>
+      <p>
+          Compared to other top study destinations like the USA and the UK, studying in Canada is generally more cost-effective. The average tuition for a master’s degree ranges from CAD 13,000 to CAD 66,000, while undergraduate programs typically cost between CAD 20,000 and CAD 56,000, depending on the university and course.
+      </p>
+      <p>
+          For more specific details and tailored advice on studying in Canada, you can reach out to our Canada study abroad consultants. They offer expert guidance to help you make informed decisions about your educational journey.
+      </p>
+      <p>&nbsp;</p>
+      <h2 id="visa-process">Canada Visa Process for Students</h2>
+      <p>
+          Getting a student visa to study abroad is generally a straightforward process. In Canada, study permits are issued by Immigration, Refugees, and Citizenship Canada (IRCC) and are valid for the length of your academic program. Our Canada study consultants have outlined the key steps to guide you through the process of obtaining a Canadian student visa. 
+          <p>
+            <span><i class="fas fa-check text-dark"></i></span> &nbsp;Apply for a study permit <br>
+            <span><i class="fas fa-check text-dark"></i></span> &nbsp;Pay the application fee of CAD 150 <br>
+            <span><i class="fas fa-check text-dark"></i></span> &nbsp;Gather the required documents and upload them <br>
+          </p>
+      </p>
+      <p>
+          If you’re planning to study in Canada for less than six months, a study permit is not required. For further information about Canadian universities, feel free to contact our Canada study abroad experts at Student Bridge.
+      </p>
+      <p>&nbsp;</p>
+      <h2 id="scholorship">Top Scholarships for International Students</h2>
+      <div class="row">
+          <div class="col-md-6">
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Commonwealth Scholarship and Fellowship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;GyanDhan Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Provost Entrance Scholarship for International Students</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Principal's Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Excellence Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Queen's University International Admission</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Principal's International Scholarship - India</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Undergraduate Scholars Entrance Scholarships</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;H.Y. Louie and Lohn Entrance Award</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Lloyd Carr-Harris Entrance Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;India First Year Excellence Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;India Centenary Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;UoA Global Citizenship Scholarship for IB Diploma</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;International Student Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;University of Alberta Gold Standard Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;International Major Entrance Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Outstanding International Student Award</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Seymour Schulich Academic Excellence Entrance Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;UCalgary International Entrance Scholarship</span></p>
+          </div>
+          <div class="col-md-6">
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Karen McKellin International Leader of Tomorrow Award</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Donald A. Wehrung International Student Award</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;President's Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Chancellor's Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Faculty of Arts Dean's Merit Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Faculty of Engineering Dean's Merit Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;UOttawa Financial Aid Bursary for International Students</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;The Lester B. Pearson International Scholarships</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Aga Khan Academy Renewable Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;International Entrance Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;International IB Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;President's beyond borders fund</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;President's Vietnam Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Merit Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;International Entrance Scholarship of Distinction</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;Global Leader of Tomorrow Award for International Students</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;International Circle of Scholars Scholarship</span></p>
+              <p><span class="city-highlight"><i class="fas fa-graduation-cap"></i> &nbsp;York University Academic Excellence Scholarships</span></p>
+          </div>
+          <p>For more details about study abroad scholarships in Canada, contact the overseas education consultants for Canada at Student Bridge.</p>
+          <p>&nbsp;</p>
+          <h2 id="work-opportunities">Work Opportunities in Canada</h2>
+          <p>
+              Our Canada and study abroad consultancy can assist you in exploring the wide range of job opportunities available in Canada. After earning a master’s degree in Data Science and Analytics, you may be eligible for roles such as:
+          </p>
+          <p>
+              <span><i class="fas fa-check text-dark"></i></span> &nbsp;Data Scientist <br>
+              <span><i class="fas fa-check text-dark"></i></span> &nbsp;Big Data Engineer <br>
+              <span><i class="fas fa-check text-dark"></i></span> &nbsp;Business Analyst <br>
+              <span><i class="fas fa-check text-dark"></i></span> &nbsp;Statistician <br>
+          </p>
+          <p>
+              Our study abroad consultants strongly believe that Canada is a top choice for Indian students seeking quality education. To find out more about studying in Canada, visit Gateway International’s website and connect with our overseas education experts.
+          </p>
+          <p>&nbsp;</p>
+          <!-- <h2 id="work-opportunities">Most Popular Student Cities: Study In Canada</h2>
+          <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+            <button class="btn btn-primary me-3">Montreal</button>
+            <button class="btn btn-primary me-3">Toronto</button>
+            <button class="btn btn-primary me-3">Vancouver</button>
+            <button class="btn btn-primary me-3">Ottawa</button>
+            <button class="btn btn-primary me-3">Quebec</button>    
+          </div> <br>
+          <div class="mt-3">
+              <p>
+                  Let's take a closer look at the process of securing a student visa for studying in Canada. For further details, feel free to reach out to the experienced Canada study consultants at Student Bridge.
+              </p>
+          </div> -->
+      </div>
+    </main>
+  </div>
+</div>
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <img src="../img/footer-logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 py-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Explore</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 py-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+                            <a href="#"><i class="fa fa-map-marker-alt me-2"></i> office No 1, 3rd floor, Silver City Plaza, G11 Markaz, Sachal Sarmast road, Islamabad</a>
+                            <a href="#"><i class="fas fa-envelope me-2"></i> info@bridge-student.com</a>
+                            <a href="#"><i class="fas fa-phone me-2"></i> +92 333 2715533</a>
+                            <!-- <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a> -->
+                            <div class="d-flex align-items-center">
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-light btn-md-square me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Student Bridge</a>, All right reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+        <div class="elfsight-app-9941ac13-0e73-4135-84bb-4b2591a07084" data-elfsight-app-lazy></div>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../../cdn.jsdelivr.net/npm/bootstrap%405.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/nav.js"></script>
+    </body>
+</html>

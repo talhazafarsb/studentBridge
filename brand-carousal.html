@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brand Marquee Carousel</title>
+  <style>
+    /*body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 2rem;
+      overflow-x: hidden;
+    }*/
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      color: #343a40;
+    }
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      /*box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);*/
+      /*background: white;
+      border-radius: 12px;*/
+      padding: 1rem 0;
+      /*border: 1px solid #ddd;*/
+    }
+    .marquee-track {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      animation: marquee 28s linear infinite;
+      will-change: transform;
+    }
+    /* Duplicate images in track for seamless */
+    .marquee-track img {
+      /*max-height: 80px;*/
+      max-width: 120px;
+      filter: grayscale(40%);
+      opacity: 0.85;
+      transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+    .marquee-track img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- <h2>Popular Universities to Study</h2> -->
+  <div class="marquee-container" aria-label="Brand logos marquee" role="region">
+    <h1>Popular Universities to Study</h2>
+    <div class="marquee-track" aria-live="off" aria-atomic="true">
+      <img src="img/universities/u1.png" alt="" />
+      <img src="img/universities/u2.png" alt="" />
+      <img src="img/universities/u3.png" alt="Volkswagen" />
+      <img src="img/universities/u4.png" alt="BMW" />
+      <img src="img/universities/u5.png" alt="Mercedes-Benz" />
+      <img src="img/universities/u6.png" alt="Audi" />
+      <img src="img/universities/u7.png" alt="Honda" />
+      <img src="img/universities/u8.png" alt="Nissan" />
+      <img src="img/universities/u9.png" alt="Hyundai" />
+      <img src="img/universities/u10.png" alt="Kia" />
+      <img src="img/universities/u11.png" alt="Chevrolet" />
+      <img src="img/universities/u12.png" alt="Jeep" />
+      <img src="img/universities/u13.png" alt="Jeep" />
+      <img src="img/universities/u14.png" alt="Jeep" />
+      <img src="img/universities/u15.png" alt="Jeep" />
+      <img src="img/universities/u16.png" alt="Jeep" />
+      <img src="img/universities/u17.png" alt="Jeep" />
+      <img src="img/universities/u18.png" alt="Jeep" />
+      <img src="img/universities/u19.png" alt="Jeep" />
+      <img src="img/universities/u20.png" alt="Jeep" />
+      <img src="img/universities/u21.png" alt="Jeep" />
+      <img src="img/universities/u22.png" alt="Jeep" />
+      <img src="img/universities/u23.png" alt="Jeep" />
+      <img src="img/universities/u24.png" alt="Jeep" />
+      <img src="img/universities/u25.png" alt="Jeep" />
+      <img src="img/universities/u26.png" alt="Jeep" />
+      <img src="img/universities/u27.png" alt="Jeep" />
+      <img src="img/universities/u28.png" alt="Jeep" />
+      <img src="img/universities/u29.png" alt="Jeep" />
+      <img src="img/universities/u30.png" alt="Jeep" />
+      <img src="img/universities/u31.png" alt="Jeep" />
+      <img src="img/universities/u32.png" alt="Jeep" />
+      <img src="img/universities/u33.png" alt="Jeep" />
+      <img src="img/universities/u34.png" alt="Jeep" />
+      <img src="img/universities/u35.png" alt="Jeep" />
+      <img src="img/universities/u36.png" alt="Jeep" />
+    </div>
+  </div>
+
+</body>
+</html>
+

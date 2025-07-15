@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Services - Tabbed Interface</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    .tabs {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .tab-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .tab-button {
+      background: none;
+      border: none;
+      outline: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      color: #555;
+      transition: all 0.3s ease;
+    }
+
+    .tab-button.active {
+      border-bottom: 3px solid #2196f3;
+      color: #2196f3;
+      font-weight: bold;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 30px 20px;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .tab-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .tab-button {
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+      }
+
+      .tab-button.active {
+        border-left: 4px solid #2196f3;
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Student Services</h2>
+
+  <div class="tabs">
+
+    <!-- Tab Buttons -->
+    <div class="tab-buttons">
+      <button class="tab-button active" data-tab="tab1">🎓 Course & University Selection</button>
+      <button class="tab-button" data-tab="tab2">📝 Application Support</button>
+      <button class="tab-button" data-tab="tab3">🛂 Visa Application</button>
+      <button class="tab-button" data-tab="tab4">🧳 Pre-Departure Support</button>
+      <button class="tab-button" data-tab="tab5">🏡 Post-Arrival Support</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="tab1" class="tab-content active">
+      <h3>Course & University Selection Services</h3>
+      <ul>
+        <li>Personalized Academic Profiling</li>
+        <li>Course Matching & Recommendations</li>
+        <li>University Shortlisting</li>
+        <li>Entry Requirement Review</li>
+        <li>Career Outlook Analysis</li>
+        <li>Parent & Student Counselling</li>
+        <li>Support for UCAS & Direct Applications</li>
+      </ul>
+    </div>
+
+    <div id="tab2" class="tab-content">
+      <h3>University Application Support Services</h3>
+      <ul>
+        <li>Application Planning & Timeline Management</li>
+        <li>Form Filling & Submission Support</li>
+        <li>Documentation Assessment & Verification</li>
+        <li>Document Vetting & Formatting</li>
+        <li>Personal Statement & SOP Review</li>
+        <li>Liaising with Universities</li>
+        <li>Application Fee Guidance</li>
+        <li>Follow-Up and Offer Management</li>
+        <li>Appeals & Reapplications (if needed)</li>
+      </ul>
+    </div>
+
+    <div id="tab3" class="tab-content">
+      <h3>Student Visa Application Support</h3>
+      <ul>
+        <li>Visa Process Guidance</li>
+        <li>Document Checklist & Evaluation</li>
+        <li>Application Form Assistance</li>
+        <li>Financial Proof Preparation</li>
+        <li>CAS/I-20/LOA Review</li>
+        <li>Biometrics & Appointment Booking</li>
+        <li>Visa Fee & Health Insurance Payments</li>
+        <li>Interview Preparation</li>
+        <li>Application Tracking & Updates</li>
+        <li>Post-Visa Guidance</li>
+      </ul>
+    </div>
+
+    <div id="tab4" class="tab-content">
+      <h3>Pre-Departure Support Services</h3>
+      <ul>
+        <li>Comprehensive Pre-Departure Briefing</li>
+        <li>Customized Packing Checklist</li>
+        <li>University Arrival Guide</li>
+        <li>Accommodation Assistance</li>
+        <li>Travel & Transit Guidance</li>
+        <li>Vaccination & Health Advice</li>
+        <li>Currency & Banking Setup</li>
+        <li>Emergency Contact & Helpline Setup</li>
+      </ul>
+    </div>
+
+    <div id="tab5" class="tab-content">
+      <h3>Exclusive Post-Arrival Support Services</h3>
+      <ul>
+        <li>University Enrolment Support</li>
+        <li>Local Bank Account Assistance</li>
+        <li>Accommodation Essentials Checklist</li>
+        <li>Public Transport & City Navigation Help</li>
+        <li>Health Services Registration Guidance</li>
+        <li>Local SIM Card & Connectivity Setup</li>
+        <li>Smart Budgeting & Financial Tips</li>
+        <li>Part-Time Work Preparation</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const target = button.getAttribute("data-tab");
+
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        tabContents.forEach(tab => tab.classList.remove("active"));
+
+        button.classList.add("active");
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>

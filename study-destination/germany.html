@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        <meta charset="utf-8">
+        <title>Study Destination - Germany</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="../../use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="../../cdn.jsdelivr.net/npm/bootstrap-icons%401.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="../lib/animate/animate.min.css" rel="stylesheet">
+        <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="../css/bootstrap.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../css/style.css" rel="stylesheet">
+        <style>
+            #info,
+            #study-in-germany,
+            #admission-requirements,
+            #expense,
+            #schelorships,
+            #visa-requirements,
+            #career-oppertunities,
+            #book-meeting,
+            #faq{
+              scroll-margin-top: 5rem;
+              scroll-behavior: smooth;
+            }
+            .bg-breadcrumb{
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/slider_image2.jpg);
+            }
+            .sidebar {
+              border-right: 1px solid #ddd;
+              /*position: sticky;*/
+              top: 0;
+              height: fit-content;
+            }
+            @media (min-width: 760px) { /* md and above in Bootstrap */
+              .sidebar {
+                position: sticky;
+                top: 0;
+              }
+            }
+            .sidebar a {
+              display: block;
+              padding: 10px 15px;
+              color: #000;
+              text-decoration: none;
+              border-left: 3px solid transparent;
+            }
+            .sidebar a.active {
+              color: #102147;
+              font-weight: bold;
+              border-left: 3px solid #102147;
+            }
+            .sidebar a:hover {
+              background-color: #eaeaea;
+            }
+            .arrow {
+              float: right;
+            }
+            .country-title {
+              font-weight: 700;
+              font-size: 2rem;
+            }
+            .card-img-top {
+              height: 70vh;
+              object-fit: unset;
+            }
+            
+            .city-highlight {
+                color: #44d2f6;
+                font-weight: 600;
+                transition: color 0.3s ease;
+            }
+
+            .city-highlight:hover {
+                color: #102147;
+            }
+
+            .marquee-container {
+              width: 100%;
+              overflow: hidden;
+              padding: 1rem 0;
+            }
+            .marquee-track {
+              display: flex;
+              gap: 3rem;
+              align-items: center;
+              animation: marquee 28s linear infinite;
+              will-change: transform;
+            }
+            .marquee-track img {
+              max-width: 120px;
+              filter: grayscale(40%);
+              opacity: 0.85;
+              transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+              cursor: pointer;
+              user-select: none;
+            }
+            .marquee-track img:hover {
+              filter: grayscale(0%);
+              opacity: 1;
+              transform: scale(1.1);
+            }
+            @keyframes marquee {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            .coursehov {
+                border-radius: 20px;
+                background-color: #102147;
+                color: white;
+                padding: 10px 15px;
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+
+            .coursehov:hover {
+                color: black;
+                background-color: #44d2f6;
+                transform: translateY(-5px) scale(1.03);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            }
+            .opportunity-card {
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .opportunity-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .icon-circle {
+              width: 60px;
+              height: 60px;
+              font-size: 1.5rem;
+              color: #fff;
+              background-color: #44d2f6;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <!-- <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a> -->
+                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+92 333 2715533</a>
+                            <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>info@bridge-student.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark px-3 sticky-top">
+          <div class="container-fluid">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+              <img src="../img/logo.png" alt="Logo" id="navbarLogo">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars text-light"></i>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+              <!-- Menu -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../index.html'>Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../services.html'>Services</a>
+                </li>
+
+                <!-- First-Level Dropdown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Student Destinations
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class='dropdown-item' href='uk.html'>Study in UK</a></li>
+
+                    <!-- Second-Level Dropdown -->
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle" href="#">Study in Europe</a>
+                      <ul class="dropdown-menu">
+                        <li><a class='dropdown-item' href='france.html'>Study in France</a></li>
+                        <li><a class='dropdown-item' href='germany.html'>Study in Germany</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a class='dropdown-item' href='usa.html'>Study in USA</a></li>
+                    <li><a class='dropdown-item' href='australia.html'>Study in Australia</a></li>
+                    <li><a class='dropdown-item' href='canada.html'>Study in Canada</a></li>
+                    <li><a class='dropdown-item' href='ireland.html'>Study in Ireland</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../about-us.html'>About</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../contact-us.html'>Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Resources</a>
+                </li> -->
+              </ul>
+
+              <!-- Right Button -->
+              <a href="https://calendly.com/info-studentbridge" class="btn btn-primary" target="_blank">Book Consultation</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Study Destination</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href='../index.html'>Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Study Destination</a></li>
+                    <li class="breadcrumb-item active text-primary">Germany</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Services Start -->
+        <div class="container-fluid">
+          <div class="row min-vh-100">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 sidebar py-4">
+              <h5 class="px-3 fw-bold">Study Destination Germany key Detail</h5>
+              <a href='#info'>Overview <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href='#study-in-germany'>Why study in Germany <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href='#admission-requirements'>Admission Requirements <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href='#expense'>Cost to Study in Ireland <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href='#schelorships'>Schelorships <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href='#visa-requirements'>Visa Requirements <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href='#career-oppertunities'>Career Opportunities <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href='#book-meeting'>Scheduler a meeting wit us <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+              <a href='#faq'>faq <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+            </nav>
+
+                <!-- Content -->
+                <main class="col-md-9 col-lg-10 p-4">
+                  <div class="card border-0 mb-4">
+                    <img src="../img/sd-ireland.jpg" class="card-img-top" alt="germany">
+                  </div>
+                  <div id="info">
+                      <h2 class="country-title">Germany</h2>
+                      <p>
+                        Germany has become a top choice for international students due to its world-class education system, modern infrastructure, and a strong focus on research and innovation. With a wide range of tuition-free or low-cost universities, students from around the globe are drawn to the opportunity to earn high-quality degrees without the heavy financial burden found in other countries. From technical universities to applied sciences institutions, Germany offers a diverse array of programs in English and German, ensuring accessibility to students of varying academic interests and language backgrounds.
+                      </p>
+                      <p>
+                          Beyond academics, Germany provides an enriching cultural and professional experience. International students benefit from exposure to a global workforce, especially with the country's strong ties to industries like engineering, technology, and finance. After graduation, Germany’s favorable visa regulations and growing demand for skilled professionals create ample job opportunities, making it not only a place to study but also a gateway to long-term career development in Europe. Whether you're pursuing undergraduate or postgraduate studies, Germany offers the ideal environment to learn, grow, and succeed.
+                      </p>
+                      <hr>
+                  </div>
+                  <div id="study-in-germany">
+                      <h2>
+                          Study in Germany: Your Pathway to Global Success
+                      </h2>
+                      <p>
+                          Germany is a highly popular destination among international students, thanks to its exceptional universities, dynamic student culture, and diverse funding opportunities. According to the World Population Review, Germany ranks third globally for the quality of its education system, reflecting its strong reputation in the academic world.
+                      </p>
+                      <p>
+                          As a top choice for higher education, Germany offers an impressive range of internationally respected universities and programs. Students can choose from a broad spectrum of courses, earn globally recognized degrees that enhance employability, and enjoy affordable living costs—all contributing to its appeal.
+                      </p>
+                      <p>
+                          Germany not only upholds a high standard of education but also offers flexible and accessible career pathways. Universities are supportive of student transfers, and there is a strong emphasis on research, fostering innovation and hands-on learning. With benefits such as scholarships, low tuition fees, a high quality of life, and long-term career opportunities, studying in Germany is a smart and rewarding investment in your future.
+                      </p>
+                      <hr>
+                  </div>
+                  <div id="admission-requirements">
+                      <h2>
+                          Steps to Meet Admission Standards in Germany
+                      </h2>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <ul style="list-style: none;">
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;CV</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Health insurance</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Motivational letter</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Entrance exam (if any)</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;German Language test</li>
+                            </ul>
+                          </div>
+                          <div class="col-md-6">
+                              <ul style="list-style: none;">
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Passport</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Proof of finances</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;High school diploma</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;English Language test</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;English Language test</li>
+                            </ul>
+                          </div>
+                      </div>
+                      <hr>
+                  </div>
+                  <div id="expense">
+                      <h2>
+                          What It Costs to Study in Germany
+                      </h2>
+                      <p>
+                          While student budgets can differ depending on the university and location, the overall cost of living in Germany is generally more affordable than in many other European countries. On average, international students in Germany spend about €934 per month on living expenses.
+                      </p>
+                      <p>
+                          The cost of education varies based on the type of institution and the level of study. For example, in the state of Baden-Württemberg, students attending universities or vocational institutions may pay around €3,000 per year. However, one of the biggest advantages of studying in Germany is that public universities typically offer tuition-free education for both domestic and international undergraduate students. Students are only required to pay a small administrative fee, which covers services such as student unions and public transport.
+                      </p>
+                      <p>
+                          Despite the overall affordability, it's important to remember that living costs can differ significantly between cities. On average, the total annual cost of studying and living in Germany is estimated at around €11,208, making it a cost-effective option for quality higher education.
+                      </p>
+                      <hr>
+                  </div>
+                  <div id="schelorships">
+                      <h2>
+                          Available Scholarships for International Students in Germany
+                      </h2>
+                      <p>
+                          Scholarships in Germany provide an excellent way to ease the financial burden of studying abroad in one of the most sought-after destinations for international students. A wide range of scholarships is available, including fully funded programs, merit-based awards, and need-based financial aid. One of the most well-known providers is the DAAD (German Academic Exchange Service), which offers numerous opportunities for both German and international students to support their higher education in Germany. Many of these scholarships make it possible to study at a significantly reduced cost—or even for free.
+                      </p>
+                      <p>
+                          If you're planning to pursue your education in Germany and are searching for the right scholarship, our team of experts is here to guide you every step of the way. With our extensive resources and in-depth experience, we can help you find and apply for the scholarship that best fits your academic goals and financial needs.
+                      </p>
+                      <hr>
+                  </div>
+                  <div id="visa-requirements">
+                      <h2>
+                          Visa Requirements
+                      </h2>
+                          <div class="row">
+                          <div class="col-md-6">
+                              <ul style="list-style: none;">
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Curriculum vitae</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Means of subsistence</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Student health insurance</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Proof of German language proficiency</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Proof paid German student visa application fee</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Two duly completed national visa application forms</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Marriage certificate (if applicable), support that with a birth certificate of any child</li>
+                            </ul>
+                          </div>
+                          <div class="col-md-6">
+                              <ul style="list-style: none;">
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Motivational letter</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Valid national passport</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Proof of English language proficiency</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Authenticated certificates of earlier education</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Two recently taken biometric portrait photographs</li>
+                                <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Proof of admission at a German education institution</li>
+                            </ul>
+                          </div>
+                      </div>
+                      <hr>
+                  </div>
+                  <div id="career-oppertunities">
+                      <h2>
+                          Career Opportunities After Graduation
+                      </h2>
+                      <p>
+                          A degree from a German university is highly respected and recognized across the globe. Graduates from German institutions are known for their strong employability, reflecting the value and quality of education they receive.
+                      </p>
+                      <p>
+                          As a result, many employers actively seek out graduates from German universities, offering competitive job opportunities across various industries. The practical skills and in-depth knowledge gained through a German education make graduates attractive to companies, who see them as valuable contributors to their organizations. In fact, German university alumni are often among the most in-demand and well-compensated professionals worldwide.
+                      </p>
+                      <p>
+                          No matter your field of study, holding a German degree can open doors to high-paying roles not just in Germany, but around the world.
+                      </p>
+                  </div>
+                  <div id="book-meeting">
+                      <h2>
+                          Book a Meeting
+                      </h2>
+                      <p>
+                        If you're feeling overwhelmed by the challenges of your academic journey, Student Bridge is here to support you every step of the way. Schedule a consultation with our experienced advisors to explore your educational goals—whether you're choosing the right program, preparing for exams, or building a strong application. Whether you're aiming for undergraduate or postgraduate studies, our personalized guidance is designed to help you reach your full potential. Take the first step toward success—book your consultation with us today!
+                      </p>
+                  </div>
+                  <div class="faq" id="faq">
+                    <div class="container py-5">
+                        <div class="row g-5 align-items-center">
+                            <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                                <div class="pb-5">
+                                    <h4 class="text-primary">FAQs</h4>
+                                    <!-- <h1 class="display-4">Study in Germany: Frequently Asked Questions</h1> -->
+                                </div>
+                                <div class="accordion bg-light rounded p-4" id="accordionGermany">
+                                    <div class="accordion-item border-0 mb-4">
+                                        <h2 class="accordion-header" id="headingOneGermany">
+                                            <button class="accordion-button text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneGermany" aria-expanded="true" aria-controls="collapseOneGermany">
+                                                What are the general admission requirements to study in Germany?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOneGermany" class="accordion-collapse collapse show" aria-labelledby="headingOneGermany" data-bs-parent="#accordionGermany">
+                                            <div class="accordion-body my-2">
+                                                <p>
+                                                    Admission requirements include recognized academic qualifications (equivalent to the German Abitur), proof of English or German language proficiency (IELTS/TOEFL or TestDaF/DSH), a motivation letter, CV, and in some cases, entrance exams or interviews for specific programs.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item border-0 mb-4">
+                                        <h2 class="accordion-header" id="headingTwoGermany">
+                                            <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoGermany" aria-expanded="false" aria-controls="collapseTwoGermany">
+                                                How much does it cost to study and live in Germany?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwoGermany" class="accordion-collapse collapse" aria-labelledby="headingTwoGermany" data-bs-parent="#accordionGermany">
+                                            <div class="accordion-body my-2">
+                                                <p>
+                                                    Most public universities in Germany have no tuition fees for international students, except for a small semester fee (€250–€350). Living expenses average €10,000–€12,000 per year, including rent, food, insurance, and transportation.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item border-0 mb-4">
+                                        <h2 class="accordion-header" id="headingThreeGermany">
+                                            <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeGermany" aria-expanded="false" aria-controls="collapseThreeGermany">
+                                                Are there scholarships available for international students in Germany?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThreeGermany" class="accordion-collapse collapse" aria-labelledby="headingThreeGermany" data-bs-parent="#accordionGermany">
+                                            <div class="accordion-body my-2">
+                                                <p>
+                                                    Yes, scholarships are offered by the DAAD (German Academic Exchange Service), Erasmus+, and individual universities. These can cover tuition (if applicable), living expenses, and travel. Early application is crucial due to high competition.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item border-0 mb-0">
+                                        <h2 class="accordion-header" id="headingFourGermany">
+                                            <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourGermany" aria-expanded="false" aria-controls="collapseFourGermany">
+                                                Can international students work and stay in Germany after graduation?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFourGermany" class="accordion-collapse collapse" aria-labelledby="headingFourGermany" data-bs-parent="#accordionGermany">
+                                            <div class="accordion-body my-2">
+                                                <p>
+                                                    Yes, international graduates can apply for an 18-month post-study work visa to find a job related to their field. During studies, students can work up to 120 full or 240 half days per year. Germany offers strong job prospects in engineering, IT, business, and research.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </main> 
+              </div>
+            </div>
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <img src="../img/footer-logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 py-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Explore</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 py-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+                            <a href="#"><i class="fa fa-map-marker-alt me-2"></i> office No 1, 3rd floor, Silver City Plaza, G11 Markaz, Sachal Sarmast road, Islamabad</a>
+                            <a href="#"><i class="fas fa-envelope me-2"></i> info@bridge-student.com</a>
+                            <a href="#"><i class="fas fa-phone me-2"></i> +92 333 2715533</a>
+                            <!-- <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a> -->
+                            <div class="d-flex align-items-center">
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-light btn-md-square me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Student Bridge</a>, All right reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+        <div class="elfsight-app-9941ac13-0e73-4135-84bb-4b2591a07084" data-elfsight-app-lazy></div>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../../cdn.jsdelivr.net/npm/bootstrap%405.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/nav.js"></script>
+    </body>
+</html>

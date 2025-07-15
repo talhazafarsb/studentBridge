@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Investa - Investment Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <style>
+    </style>
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
+                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                            <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+        
+        <!-- Navbar & Hero Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark px-3 sticky-top">
+          <div class="container-fluid">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+              <img src="img/logo.png" alt="Logo" id="navbarLogo">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+              <!-- Menu -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">Services</a>
+                </li>
+
+                <!-- First-Level Dropdown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Student Destinations
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class="dropdown-item" href="#">Study in UK</a></li>
+
+                    <!-- Second-Level Dropdown -->
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle" href="#">Study in Europe</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Study in France</a></li>
+                        <li><a class="dropdown-item" href="#">Study in Germany</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Study in USA</a></li>
+                    <li><a class="dropdown-item" href="#">Study in Australia</a></li>
+                    <li><a class="dropdown-item" href="#">Study in Canada</a></li>
+                    <li><a class="dropdown-item" href="#">Study in Ireland</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Resources</a>
+                </li>
+              </ul>
+
+              <!-- Right Button -->
+              <a href="#" class="btn btn-primary">Book Consultation</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar & Hero End -->
+
+        <!-- Timeline  Start -->
+        <div class="mt-5">
+            <!-- <h2 style="text-align:center; color: #333;">Services</h2> -->
+
+              <div class="timeline">
+
+                <!-- Course Selection -->
+                <div class="timeline-entry left">
+                  <div class="content">
+                    <h3>🎓 Course & University Selection</h3>
+                    <p>
+                      We help students make informed and confident decisions about their academic future by offering tailored guidance in selecting the right course and university that aligns with their interests, strengths, and long-term goals.
+                    </p>
+                    <ul>
+                      <li>Personalized Academic Profiling
+                        <p>
+                          In-depth analysis of academic history, career goals, subject interests, and future aspirations.
+                        </p>
+                      </li>
+                      <li>
+                        Course Matching & Recommendations
+                        <p>
+                          Identifying the most suitable undergraduate or postgraduate courses based on aptitude, demand, and future career prospects.
+                        </p>
+                      </li>
+                      <li>
+                        University Shortlisting
+                        <p>
+                          Recommending top UK universities that best fit the student’s academic profile, budget, and preferences (location, ranking, scholarships, etc.).
+                        </p>
+                      </li>
+                      <li>
+                        Entry Requirement Review
+                        <p>
+                          Evaluating eligibility based on academic records, language proficiency, and other admission criteria.
+                        </p>
+                      </li>
+                      <li>
+                        Career Outlook Analysis
+                        <p>
+                          Insight into the employability and industry relevance of chosen courses.
+                        </p>
+                      </li>
+                      <li>
+                        Parent & Student Counselling
+                        <p>
+                          One-on-one sessions to guide families in making balanced and strategic decisions.
+                        </p>
+                      </li>
+                      <li>
+                        Support for UCAS & Direct Applications
+                        <p>
+                          Support for UCAS & Direct Applications
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- University Application -->
+                <div class="timeline-entry right">
+                  <div class="content">
+                    <h3>📝 University Application Support</h3>
+                    <ul>
+                      <li>Application Planning & Timeline Management</li>
+                      <li>Form Filling & Submission Support</li>
+                      <li>Documentation Assessment & Verification</li>
+                      <li>Personal Statement & SOP Review</li>
+                      <li>Liaising with Universities</li>
+                      <li>Follow-Up and Offer Management</li>
+                      <li>Appeals & Reapplications (if needed)</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Visa Application -->
+                <div class="timeline-entry left">
+                  <div class="content">
+                    <h3>🛂 Student Visa Application Support</h3>
+                    <ul>
+                      <li>Visa Process Guidance</li>
+                      <li>Document Checklist & Evaluation</li>
+                      <li>Financial Proof Preparation</li>
+                      <li>Application Form Assistance</li>
+                      <li>Interview Preparation</li>
+                      <li>Biometrics & Appointments</li>
+                      <li>Post-Visa Guidance</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Pre-Departure -->
+                <div class="timeline-entry right">
+                  <div class="content">
+                    <h3>🧳 Pre-Departure Support</h3>
+                    <ul>
+                      <li>Comprehensive Pre-Departure Briefing</li>
+                      <li>Customized Packing Checklist</li>
+                      <li>University Arrival Guide</li>
+                      <li>Accommodation Assistance</li>
+                      <li>Currency & Banking Setup</li>
+                      <li>Emergency Contact Setup</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Post-Arrival -->
+                <div class="timeline-entry left">
+                  <div class="content">
+                    <h3>🏡 Post-Arrival Support</h3>
+                    <ul>
+                      <li>University Enrolment Support</li>
+                      <li>Bank Account & SIM Setup</li>
+                      <li>Public Transport Navigation</li>
+                      <li>Health Services Registration</li>
+                      <li>Budgeting & Part-Time Work Tips</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+        </div>
+        <!-- Timeline End -->
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    </body>
+
+</html>

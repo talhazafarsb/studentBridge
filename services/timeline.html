@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Services Timeline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #2196f3;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .timeline-entry {
+      padding: 20px 30px;
+      position: relative;
+      width: 50%;
+    }
+
+    .timeline-entry::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -13px;
+      background-color: white;
+      border: 4px solid #2196f3;
+      top: 30px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-entry.left {
+      left: 0;
+    }
+
+    .timeline-entry.right {
+      left: 50%;
+    }
+
+    .timeline-entry .content {
+      padding: 20px;
+      background: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .timeline-entry h3 {
+      margin-top: 0;
+      color: #2196f3;
+    }
+
+    .timeline-entry ul {
+      padding-left: 20px;
+    }
+
+    .timeline-entry ul li {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 20px;
+      }
+
+      .timeline-entry {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 25px;
+      }
+
+      .timeline-entry.right {
+        left: 0%;
+      }
+
+      .timeline-entry::after {
+        left: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center; color: #333;">Student Support Services Timeline</h2>
+
+  <div class="timeline">
+
+    <!-- Course Selection -->
+    <div class="timeline-entry left">
+      <div class="content">
+        <h3>🎓 Course & University Selection</h3>
+        <ul>
+          <li>Personalized Academic Profiling</li>
+          <li>Course Matching & Recommendations</li>
+          <li>University Shortlisting</li>
+          <li>Entry Requirement Review</li>
+          <li>Career Outlook Analysis</li>
+          <li>Parent & Student Counselling</li>
+          <li>Support for UCAS & Direct Applications</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- University Application -->
+    <div class="timeline-entry right">
+      <div class="content">
+        <h3>📝 University Application Support</h3>
+        <ul>
+          <li>Application Planning & Timeline Management</li>
+          <li>Form Filling & Submission Support</li>
+          <li>Documentation Assessment & Verification</li>
+          <li>Personal Statement & SOP Review</li>
+          <li>Liaising with Universities</li>
+          <li>Follow-Up and Offer Management</li>
+          <li>Appeals & Reapplications (if needed)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Visa Application -->
+    <div class="timeline-entry left">
+      <div class="content">
+        <h3>🛂 Student Visa Application Support</h3>
+        <ul>
+          <li>Visa Process Guidance</li>
+          <li>Document Checklist & Evaluation</li>
+          <li>Financial Proof Preparation</li>
+          <li>Application Form Assistance</li>
+          <li>Interview Preparation</li>
+          <li>Biometrics & Appointments</li>
+          <li>Post-Visa Guidance</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pre-Departure -->
+    <div class="timeline-entry right">
+      <div class="content">
+        <h3>🧳 Pre-Departure Support</h3>
+        <ul>
+          <li>Comprehensive Pre-Departure Briefing</li>
+          <li>Customized Packing Checklist</li>
+          <li>University Arrival Guide</li>
+          <li>Accommodation Assistance</li>
+          <li>Currency & Banking Setup</li>
+          <li>Emergency Contact Setup</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Post-Arrival -->
+    <div class="timeline-entry left">
+      <div class="content">
+        <h3>🏡 Post-Arrival Support</h3>
+        <ul>
+          <li>University Enrolment Support</li>
+          <li>Bank Account & SIM Setup</li>
+          <li>Public Transport Navigation</li>
+          <li>Health Services Registration</li>
+          <li>Budgeting & Part-Time Work Tips</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        <meta charset="utf-8">
+        <title>Study Destination - Ireland</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="../../use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="../../cdn.jsdelivr.net/npm/bootstrap-icons%401.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="../lib/animate/animate.min.css" rel="stylesheet">
+        <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="../css/bootstrap.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../css/style.css" rel="stylesheet">
+        <style>
+            #info,
+            #why-study-in,
+            #admission-requirements,
+            #study-cost,
+            #scholarships,
+            #visa-requirements,
+            #work-opportunities,
+            #book-meeting,
+            #faq{
+              scroll-margin-top: 5rem;
+              scroll-behavior: smooth;
+            }
+            .bg-breadcrumb{
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/slider_image2.jpg);
+            }
+            .sidebar {
+              border-right: 1px solid #ddd;
+              /*position: sticky;*/
+              top: 0;
+              height: fit-content;
+            }
+            @media (min-width: 760px) { /* md and above in Bootstrap */
+              .sidebar {
+                position: sticky;
+                top: 0;
+              }
+            }
+            .sidebar a {
+              display: block;
+              padding: 10px 15px;
+              color: #000;
+              text-decoration: none;
+              border-left: 3px solid transparent;
+            }
+            .sidebar a.active {
+              color: #102147;
+              font-weight: bold;
+              border-left: 3px solid #102147;
+            }
+            .sidebar a:hover {
+              background-color: #eaeaea;
+            }
+            .arrow {
+              float: right;
+            }
+            .country-title {
+              font-weight: 700;
+              font-size: 2rem;
+            }
+            .card-img-top {
+              height: 70vh;
+              object-fit: unset;
+            }
+            
+            .city-highlight {
+                color: #44d2f6;
+                font-weight: 600;
+                transition: color 0.3s ease;
+            }
+
+            .city-highlight:hover {
+                color: #102147;
+            }
+
+            .marquee-container {
+              width: 100%;
+              overflow: hidden;
+              padding: 1rem 0;
+            }
+            .marquee-track {
+              display: flex;
+              gap: 3rem;
+              align-items: center;
+              animation: marquee 28s linear infinite;
+              will-change: transform;
+            }
+            .marquee-track img {
+              max-width: 120px;
+              filter: grayscale(40%);
+              opacity: 0.85;
+              transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+              cursor: pointer;
+              user-select: none;
+            }
+            .marquee-track img:hover {
+              filter: grayscale(0%);
+              opacity: 1;
+              transform: scale(1.1);
+            }
+            @keyframes marquee {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            .coursehov {
+                border-radius: 20px;
+                background-color: #102147;
+                color: white;
+                padding: 10px 15px;
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+
+            .coursehov:hover {
+                color: black;
+                background-color: #44d2f6;
+                transform: translateY(-5px) scale(1.03);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            }
+            .opportunity-card {
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .opportunity-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .icon-circle {
+              width: 60px;
+              height: 60px;
+              font-size: 1.5rem;
+              color: #fff;
+              background-color: #44d2f6;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <!-- <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a> -->
+                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+92 333 2715533</a>
+                            <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>info@bridge-student.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark px-3 sticky-top">
+          <div class="container-fluid">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+              <img src="../img/logo.png" alt="Logo" id="navbarLogo">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars text-light"></i>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+              <!-- Menu -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../index.html'>Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../services.html'>Services</a>
+                </li>
+
+                <!-- First-Level Dropdown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Student Destinations
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class='dropdown-item' href='uk.html'>Study in UK</a></li>
+
+                    <!-- Second-Level Dropdown -->
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle" href="#">Study in Europe</a>
+                      <ul class="dropdown-menu">
+                        <li><a class='dropdown-item' href='france.html'>Study in France</a></li>
+                        <li><a class='dropdown-item' href='germany.html'>Study in Germany</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a class='dropdown-item' href='usa.html'>Study in USA</a></li>
+                    <li><a class='dropdown-item' href='australia.html'>Study in Australia</a></li>
+                    <li><a class='dropdown-item' href='canada.html'>Study in Canada</a></li>
+                    <li><a class='dropdown-item' href='ireland.html'>Study in Ireland</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../about-us.html'>About</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class='nav-link' href='../contact-us.html'>Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Resources</a>
+                </li> -->
+              </ul>
+
+              <!-- Right Button -->
+              <a href="https://calendly.com/info-studentbridge" class="btn btn-primary" target="_blank">Book Consultation</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Study Destination</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href='../index.html'>Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Study Destination</a></li>
+                    <li class="breadcrumb-item active text-primary">Ireland</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Services Start -->
+        <div class="container-fluid">
+  <div class="row min-vh-100">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 sidebar py-4">
+      <h5 class="px-3 fw-bold">Study Destination Ireland key Detail</h5>
+      <a href='#info'>Overview <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href='#why-study-in'>Why Study in Ireland <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href='#admission-requirements'>Admission Requirements <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href='#study-cost'>Cost of Studying <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href='#scholarships'>Scholarships <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href='#visa-requirements'>Visa Requirements <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href='#work-opportunities'>Work Opportunities <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href='#book-meeting'>Schedule a Meeting <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+      <a href='#faq'>FAQ's <span class="arrow"><i class="fas fa-arrow-right"></i></span></a>
+    </nav>
+
+    <!-- Content -->
+    <main class="col-md-9 col-lg-10 p-4">
+      <div class="card border-0 mb-4">
+        <img src="../img/sd-ireland.jpg" class="card-img-top" alt="ireland">
+      </div>
+      <div id="info">
+          <h2 class="country-title">Ireland</h2>
+          <p>
+            Ireland is one of the most popular study-abroad destinations in Europe. Its universities offer high-quality education in an environment that blends tradition with modernity. With thousands of academic programs available across more than two dozen institutions, international students have a wide range of options to choose from. Ireland is an especially appealing place to study for those who enjoy nature, literature, and history.
+          </p>
+          <p>
+              The Irish are famously friendly, and many rural communities actively preserve their rich cultural heritage, giving students ample opportunities to explore the country. Ireland’s cities are compact and easy to navigate, its people are welcoming and open-minded, and the nation is home to one of the world’s leading education systems.
+          </p>
+          <hr>
+      </div>
+      <div id="why-study-in">
+          <h2>
+              Top Reasons to Study in Ireland
+          </h2>
+          <p>
+              Studying in Ireland offers numerous advantages, including access to one of the world’s highest-quality education systems. Irish institutions are globally connected, providing graduates with strong career opportunities both locally and internationally.
+          </p>
+          <p>
+              Ireland is home to several universities ranked in the top 3% globally, and its graduates are highly sought after worldwide. The country also has a youthful population, with one-third under the age of 25, and consistently ranks among the top 20 nations for peace, human development, and quality of life—making it a safe, vibrant, and welcoming place to live and study alongside over 35,000 international students.
+          </p>
+      </div>
+      <div id="admission-requirements">
+          <h2>
+              Admission Requirements In Ireland:
+          </h2>
+          <div class="row">
+              <div class="col-md-6">
+                <ul style="list-style: none;">
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;GMAT scores
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Personal Statement
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;English language test scores
+                    </li>
+                </ul>  
+              </div>
+              <div class="col-md-6">
+                  <ul style="list-style: none;">
+                    <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Work experience</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Recommendation letter</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> &nbsp;Transcripts for university courses</li>
+                </ul>
+              </div>
+          </div>
+      </div>
+      <div id="study-cost">
+          <h2>
+              Cost Of Studying
+          </h2>
+          <p>
+              Tuition fees in Ireland are determined by the institution offering the program and are influenced by factors such as the cost of facilities, equipment, program demand, and the institution’s reputation.
+          </p>
+          <p>
+              For international students, undergraduate and postgraduate tuition typically ranges from €6,000 to €20,000 per year. However, students from EU countries often benefit from free undergraduate tuition. Living expenses vary by city and lifestyle, but international students should budget between €7,000 and €12,000 annually to cover rent, utilities, food, books, healthcare, transport, and personal expenses.
+          </p>
+          <div class="row">
+              <div class="col-md-6">
+                <ul style="list-style: none;">
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;University College Dublin
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Trinity College Dublin
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;University College Cork
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Dublin City University
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Maynooth University
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;University of Limerick
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;University of Galway
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Cork Institute of Technology
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Dublin Business School
+
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;National College of Ireland
+                    </li>
+                </ul>  
+              </div>
+              <div class="col-md-6">
+                  <ul style="list-style: none;">
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Dublin Institute of Technology
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Letter Kenny Institute of Technology
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;South East Technological University
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;RCSI Institute of Leadership
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Royal College of Surgeons in Ireland
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Technological University Dublin
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;National University of Ireland Galway
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Griffith College Dublin Main Campus
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Technological University of the Shannon: Midlands
+                    </li>
+                </ul>
+              </div>
+          </div>
+      </div>
+      <div id="scholarships">
+          <h2>
+              Scholarships
+          </h2>
+          <p>
+              With early planning and by applying for multiple partial scholarships before university deadlines, studying in Ireland can be quite affordable. The Irish government, along with various public and private organizations, offers a range of scholarships and bursaries. Some research programs even cover up to 100% of living expenses in addition to tuition support.
+          </p>
+          <p>
+              Undergraduate education is free for citizens of Ireland, the EU/EEA, and Switzerland, as tuition costs are covered by the Higher Education Authority (HEA).
+          </p>
+      </div>
+      <div id="visa-requirements">
+          <h2>
+              Student Visa Requirements
+          </h2>
+          <div class="row">
+              <div class="col-md-6">
+                <ul style="list-style: none;">
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Valid Passport
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Passport-size photo
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Evidence of course fee paid
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;English Language Proficiency Test Scores
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;A signed letter of application which explains why you require the visa
+                    </li>
+                </ul>  
+              </div>
+              <div class="col-md-6">
+                  <ul style="list-style: none;">
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Health Insurance
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Proof of sufficient funds
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;Evidence of your scholarship
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-circle-right"></i> &nbsp;A Letter of Acceptance from the Irish educational institution
+                    </li>
+                </ul>
+              </div>
+          </div>
+      </div>
+      <div id="work-opportunities">
+          <h2>
+              Post-Study Work Opportunities
+          </h2>
+          <p>
+              Over the past few decades, Ireland has transformed from one of Europe’s less developed economies into a major economic hub, especially after joining the EU. Structural reforms have attracted numerous global companies—particularly in the tech and pharmaceutical sectors—to set up their European headquarters in Ireland, including Google, Airbnb, Pfizer, and Dell.
+          </p>
+          <p>
+              This strong international presence creates abundant job opportunities for graduates with global academic backgrounds. Studying in Ireland significantly enhances your employment prospects and opens the door to staying after graduation. Through the Irish government's Third Level Graduate Scheme, international graduates can apply for a one-year stay-back visa to seek employment, while postgraduate students are eligible for a two-year extension.
+          </p>
+      </div>
+      <div id="book-meeting">
+          <h2>
+              Book a Meeting
+          </h2>
+          <p>
+            If you're feeling overwhelmed by the challenges of your academic journey, Student Bridge is here to support you every step of the way. Schedule a consultation with our experienced advisors to explore your educational goals—whether you're choosing the right program, preparing for exams, or building a strong application. Whether you're aiming for undergraduate or postgraduate studies, our personalized guidance is designed to help you reach your full potential. Take the first step toward success—book your consultation with us today!
+          </p>
+      </div>
+      <div class="faq" id="faq">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="pb-5">
+                            <h4 class="text-primary">FAQs</h4>
+                            <!-- <h1 class="display-4">Get the Answers to Common Questions</h1> -->
+                        </div>
+                       <div class="accordion bg-light rounded p-4" id="accordionExample">
+                            <div class="accordion-item border-0 mb-4">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseTOne">
+                                        What are the general admission requirements to study in Ireland?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body my-2">
+                                        <p>
+                                            To apply for higher education in Ireland, you typically need academic transcripts, English language proficiency test scores (IELTS/TOEFL), a personal statement, letters of recommendation, and, in some cases, GMAT scores and work experience for postgraduate programs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-4">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How much does it cost to study and live in Ireland as an international student?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body my-2">
+                                        <p>
+                                            Tuition fees range from €6,000 to €20,000 per year, depending on the institution and program. Living costs vary by city and lifestyle, but you should budget around €7,000–€12,000 annually for accommodation, food, transport, and other expenses.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-4">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Are scholarships available for international students in Ireland?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body my-2">
+                                        <p>
+                                            Yes, the Irish government and various institutions offer partial scholarships and bursaries. Some research-based programs may even cover full tuition and living expenses. Planning and applying early increases your chances of receiving financial aid.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-0">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Can international students work and stay in Ireland after graduation?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body my-2">
+                                        <p>
+                                            Yes, through the Third Level Graduate Scheme, graduates can stay in Ireland for one year (two years for postgraduates) to seek employment. Ireland is home to many global companies, offering excellent career opportunities for international graduates.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+  </div>
+</div>
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <img src="../img/footer-logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 py-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Explore</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 py-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+                            <a href="#"><i class="fa fa-map-marker-alt me-2"></i> office No 1, 3rd floor, Silver City Plaza, G11 Markaz, Sachal Sarmast road, Islamabad</a>
+                            <a href="#"><i class="fas fa-envelope me-2"></i> info@bridge-student.com</a>
+                            <a href="#"><i class="fas fa-phone me-2"></i> +92 333 2715533</a>
+                            <!-- <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a> -->
+                            <div class="d-flex align-items-center">
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-light btn-md-square me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Student Bridge</a>, All right reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+        <div class="elfsight-app-9941ac13-0e73-4135-84bb-4b2591a07084" data-elfsight-app-lazy></div>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../../cdn.jsdelivr.net/npm/bootstrap%405.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/nav.js"></script>
+    </body>
+</html>
