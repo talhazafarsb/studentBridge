@@ -10,17 +10,19 @@
   });
 
 window.addEventListener('scroll', function () {
-  const logo = document.getElementById('navbarLogo');
-  const navBanner = document.getElementById('mainNavbar');
-  const navbar = document.getElementsByClassName('navbar')[0];
+  if (window.innerWidth > 992) {
+    const logo = document.getElementById('navbarLogo');
+    const navBanner = document.getElementById('mainNavbar');
+    const navbar = document.getElementsByClassName('navbar')[0];
 
-  if (window.scrollY > 50) {
-    logo.classList.add('shrunk');
-    navBanner.classList.add('shrunk');
-    navbar.classList.add('shrunk');
-  } else {
-    logo.classList.remove('shrunk');
-    navBanner.classList.remove('shrunk');
-    navbar.classList.remove('shrunk');
-  }
+    if (window.scrollY > 50) {
+      logo.classList.add('shrunk');
+      navBanner.classList.add('shrunk');
+      navbar.classList.add('shrunk');
+    } else {
+      logo.classList.remove('shrunk');
+      navBanner.classList.remove('shrunk');
+      navbar.classList.remove('shrunk');
+    }
+  }  
 });

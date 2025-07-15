@@ -302,6 +302,15 @@
         .navbar, #navbarLogo, #mainNavbar {
           transition: all 0.3s ease;
         }
+
+        @media (max-width: 992px) {
+          .navbar,
+          #navbarLogo,
+          #mainNavbar {
+            height: 8rem;
+          }
+        }
+
 /*** Navbar End ***/
 
 /*timeline start*/
