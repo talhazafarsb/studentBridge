@@ -136,6 +136,31 @@
         return false;
     });
 
-
+    $(".study-destinations-slider").owlCarousel({
+        loop: true,           // Continuously loop the slider
+        margin: 25,           // Space between items
+        nav: false,           // Set to false to hide navigation arrows
+        autoplay: true,       // Autoplay the slider
+        autoplayTimeout: 3000, // Autoplay interval in milliseconds (3 seconds)
+        autoplayHoverPause: true, // Pause autoplay on hover
+        dots: true,           // Show navigation dots
+        responsive: {         // Responsive settings for different screen sizes
+            0: {
+                items: 1
+            },
+            576: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 4
+            },
+            1200: {
+                items: 5 // More items for larger screens
+            }
+        }
+    });
 })(jQuery);
 
