@@ -33,6 +33,7 @@
             #info,
             #study-in,
             #admission-requirements,
+            #top-courses,
             #study-cost,
             #scholorships,
             #visa-requirements,
@@ -85,83 +86,14 @@
               object-fit: unset;
             }
             
-            .city-highlight {
+            .course-highlight {
                 color: #44d2f6;
                 font-weight: 600;
                 transition: color 0.3s ease;
             }
 
-            .city-highlight:hover {
+            .course-highlight:hover {
                 color: #102147;
-            }
-
-            .marquee-container {
-              width: 100%;
-              overflow: hidden;
-              padding: 1rem 0;
-            }
-            .marquee-track {
-              display: flex;
-              gap: 3rem;
-              align-items: center;
-              animation: marquee 28s linear infinite;
-              will-change: transform;
-            }
-            .marquee-track img {
-              max-width: 120px;
-              filter: grayscale(40%);
-              opacity: 0.85;
-              transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-              cursor: pointer;
-              user-select: none;
-            }
-            .marquee-track img:hover {
-              filter: grayscale(0%);
-              opacity: 1;
-              transform: scale(1.1);
-            }
-            @keyframes marquee {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-50%);
-              }
-            }
-            .coursehov {
-                border-radius: 20px;
-                background-color: #102147;
-                color: white;
-                padding: 10px 15px;
-                transition: all 0.3s ease-in-out;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                cursor: pointer;
-            }
-
-            .coursehov:hover {
-                color: black;
-                background-color: #44d2f6;
-                transform: translateY(-5px) scale(1.03);
-                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-            }
-            .opportunity-card {
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            .opportunity-card:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            }
-            .icon-circle {
-              width: 60px;
-              height: 60px;
-              font-size: 1.5rem;
-              color: #fff;
-              background-color: #44d2f6;
-              border-radius: 50%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin: 0 auto;
             }
         </style>
     </head>
@@ -307,6 +239,11 @@
         <i class="fas fa-arrow-right"></i>
       </a>
 
+      <a href="#top-courses" class="d-flex justify-content-between align-items-center px-3 py-2">
+        <span>Top Courses</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+
       <a href="#study-cost" class="d-flex justify-content-between align-items-center px-3 py-2">
         <span>Cost of Study</span>
         <i class="fas fa-arrow-right"></i>
@@ -423,6 +360,50 @@
               </div>
           </div>
       </div>
+
+      <div id="top-courses">
+        <h2>Top Courses</h2>
+        &nbsp;
+        <div class="row">
+          <div class="col-md-6">
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Business and Administrative Studies</span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Marketing</span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Finance</span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Computer Science
+              </span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Mechanical Engineering
+              </span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Electrical Engineering
+              </span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Civil Engineering
+              </span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Aerospace Engineering
+              </span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Law
+              </span></p>
+          </div>
+          <div class="col-md-6">
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Political Science
+              </span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Fine Arts
+              </span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> History</span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Literature
+              </span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Medicine
+              </span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Dentistry
+              </span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Pharmacy
+              </span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Psychology
+              </span></p>
+              <p><span class="course-highlight"><i class="fas fa-arrow-circle-right"></i> Biotechnology
+              </span></p>
+          </div>
+        </div> 
+      </div>
+
       <div id="study-cost">
           <h2>
               Cost of Study
