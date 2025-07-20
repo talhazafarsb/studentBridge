@@ -9,7 +9,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
   <style>
+
     .service-card {
       transition: transform 0.3s ease;
     }
@@ -19,119 +23,19 @@
   </style>
 </head>
 <body>
-<section id="services" class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="mb-4">Our Services</h2>
-    <div class="row">
-      <!-- Service 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow">
-          <div class="card-body">
-            <h5 class="card-title">Study Abroad</h5>
-            <p class="card-text">Guidance and application support for studying in top countries like USA, UK, Canada, Australia, and more.</p>
-            <a href="services.html#study-abroad" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow">
-          <div class="card-body">
-            <h5 class="card-title">Visa Assistance</h5>
-            <p class="card-text">Complete support for student visa application, documentation, and interview preparation.</p>
-            <a href="services.html#visa-assistance" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow">
-          <div class="card-body">
-            <h5 class="card-title">Career Counseling</h5>
-            <p class="card-text">Personalized counseling to help you choose the right program based on your skills and goals.</p>
-            <a href="services.html#career-counseling" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service 4 -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100 shadow">
-          <div class="card-body">
-            <h5 class="card-title">Application Support</h5>
-            <p class="card-text">Help with university selection, SOP writing, recommendations, and form filling.</p>
-            <a href="services.html#application-support" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service 5 -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100 shadow">
-          <div class="card-body">
-            <h5 class="card-title">Test Preparation</h5>
-            <p class="card-text">Coaching and resources for IELTS, TOEFL, GRE, GMAT, and other entrance exams.</p>
-            <a href="services.html#test-preparation" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <h2>second</h2>
-  <section id="services" class="py-5">
-  <div class="container text-center">
-    <h2 class="mb-4">Our Services</h2>
-    <div class="row">
-      <div class="col-md-2 offset-md-1">
-        <i class="fas fa-plane-departure fa-2x mb-2 text-primary"></i>
-        <h6>Study Abroad</h6>
-        <a href="services.html#study-abroad">More</a>
-      </div>
-      <div class="col-md-2">
-        <i class="fas fa-passport fa-2x mb-2 text-primary"></i>
-        <h6>Visa Help</h6>
-        <a href="services.html#visa-assistance">More</a>
-      </div>
-      <div class="col-md-2">
-        <i class="fas fa-user-graduate fa-2x mb-2 text-primary"></i>
-        <h6>Career Counseling</h6>
-        <a href="services.html#career-counseling">More</a>
-      </div>
-      <div class="col-md-2">
-        <i class="fas fa-file-signature fa-2x mb-2 text-primary"></i>
-        <h6>Application Help</h6>
-        <a href="services.html#application-support">More</a>
-      </div>
-      <div class="col-md-2">
-        <i class="fas fa-chalkboard-teacher fa-2x mb-2 text-primary"></i>
-        <h6>Test Prep</h6>
-        <a href="services.html#test-preparation">More</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<h2>third</h2>
-
   <!-- Services Section -->
-  <section id="services" class="py-5 bg-light">
+  <section id="services" class="py-5 bg-light services">
     <div class="container text-center">
       <h2 class="mb-4">Our Services</h2>
       <div class="row g-4">
 
         <!-- Service 1 -->
-        <div class="col-md-4">
-          <div class="card service-card h-100 shadow">
+        <div class="col-md-4 service-item">
+          <div class="card service-card h-100 shadow service-content">
             <div class="card-body">
-              <i class="fas fa-plane-departure fa-2x mb-3 text-primary"></i>
-              <h5 class="card-title">Study Abroad</h5>
-              <p class="card-text">Guidance to study in the USA, UK, Canada, Australia, and more.</p>
+              <img src="img/icon/graduation-hat.png" class="mb-2">
+              <h5 class="card-title"> Course & University Selection</h5>
+              <!-- <p class="card-text">Guidance to study in the USA, UK, Canada, Australia, and more.</p> -->
               <a href="services.html#study-abroad" class="btn btn-outline-primary">Learn More</a>
             </div>
           </div>
@@ -141,9 +45,9 @@
         <div class="col-md-4">
           <div class="card service-card h-100 shadow">
             <div class="card-body">
-              <i class="fas fa-passport fa-2x mb-3 text-primary"></i>
-              <h5 class="card-title">Visa Assistance</h5>
-              <p class="card-text">Expert help with visa forms, documents, and interviews.</p>
+              <img src="img/icon/notes.png" class="mb-2">
+              <h5 class="card-title">Application Support</h5>
+              <!-- <p class="card-text">Expert help with visa forms, documents, and interviews.</p> -->
               <a href="services.html#visa-assistance" class="btn btn-outline-primary">Learn More</a>
             </div>
           </div>
@@ -153,9 +57,9 @@
         <div class="col-md-4">
           <div class="card service-card h-100 shadow">
             <div class="card-body">
-              <i class="fas fa-user-graduate fa-2x mb-3 text-primary"></i>
-              <h5 class="card-title">Career Counseling</h5>
-              <p class="card-text">1-to-1 sessions to help you choose the right path and course.</p>
+              <img src="img/icon/airoplane.png" class="mb-2">
+              <h5 class="card-title">Visa Support</h5>
+              <!-- <p class="card-text">1-to-1 sessions to help you choose the right path and course.</p> -->
               <a href="services.html#career-counseling" class="btn btn-outline-primary">Learn More</a>
             </div>
           </div>
@@ -165,9 +69,9 @@
         <div class="col-md-6">
           <div class="card service-card h-100 shadow">
             <div class="card-body">
-              <i class="fas fa-file-signature fa-2x mb-3 text-primary"></i>
-              <h5 class="card-title">Application Support</h5>
-              <p class="card-text">Help with university shortlisting, SOPs, and application filling.</p>
+              <img src="img/icon/suitcase.png" class="mb-2">
+              <h5 class="card-title">Pre-Departure Support</h5>
+              <!-- <p class="card-text">Help with university shortlisting, SOPs, and application filling.</p> -->
               <a href="services.html#application-support" class="btn btn-outline-primary">Learn More</a>
             </div>
           </div>
@@ -177,9 +81,9 @@
         <div class="col-md-6">
           <div class="card service-card h-100 shadow">
             <div class="card-body">
-              <i class="fas fa-chalkboard-teacher fa-2x mb-3 text-primary"></i>
-              <h5 class="card-title">Test Preparation</h5>
-              <p class="card-text">Preparation for IELTS, TOEFL, GRE, and more.</p>
+              <img src="img/icon/earth.png" class="mb-2">
+              <h5 class="card-title">Post-Arrival Support</h5>
+              <!-- <p class="card-text">Preparation for IELTS, TOEFL, GRE, and more.</p> -->
               <a href="services.html#test-preparation" class="btn btn-outline-primary">Learn More</a>
             </div>
           </div>

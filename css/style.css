@@ -389,6 +389,19 @@
 
 /*study-destinations end*/
 
+/*home-services-start*/
+
+    .service-card {
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover *{
+        background: #102147;
+        color: #fff !important;
+      transform: translateY(-5px);
+    }
+
+/*home-services-end*/
+
 
 /*timeline start*/
         .timeline {
