@@ -29,7 +29,7 @@
         }
     });
 
-
+    //study-destinations slider
     // Hero Header carousel
     $(".header-carousel").owlCarousel({
         items: 1,
@@ -160,6 +160,27 @@
             1200: {
                 items: 5 // More items for larger screens
             }
+        }
+    });
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        responsive: {
+          0: {
+            items: 2
+          },
+          576: {
+            items: 3
+          },
+          768: {
+            items: 4
+          },
+          992: {
+            items: 5
+          }
         }
     });
 })(jQuery);

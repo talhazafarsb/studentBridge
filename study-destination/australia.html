@@ -37,6 +37,7 @@
             #work-opportunities,
             #visa-requirements,
             #meet-with-us,
+            #top-universities,
             #go8, #faq
             {
               scroll-margin-top: 5rem;
@@ -82,85 +83,6 @@
             .card-img-top {
               height: 70vh;
               object-fit: unset;
-            }
-            
-            .city-highlight {
-                color: #44d2f6;
-                font-weight: 600;
-                transition: color 0.3s ease;
-            }
-
-            .city-highlight:hover {
-                color: #102147;
-            }
-
-            .marquee-container {
-              width: 100%;
-              overflow: hidden;
-              padding: 1rem 0;
-            }
-            .marquee-track {
-              display: flex;
-              gap: 3rem;
-              align-items: center;
-              animation: marquee 28s linear infinite;
-              will-change: transform;
-            }
-            .marquee-track img {
-              max-width: 120px;
-              filter: grayscale(40%);
-              opacity: 0.85;
-              transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-              cursor: pointer;
-              user-select: none;
-            }
-            .marquee-track img:hover {
-              filter: grayscale(0%);
-              opacity: 1;
-              transform: scale(1.1);
-            }
-            @keyframes marquee {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-50%);
-              }
-            }
-            .coursehov {
-                border-radius: 20px;
-                background-color: #102147;
-                color: white;
-                padding: 10px 15px;
-                transition: all 0.3s ease-in-out;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                cursor: pointer;
-            }
-
-            .coursehov:hover {
-                color: black;
-                background-color: #44d2f6;
-                transform: translateY(-5px) scale(1.03);
-                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-            }
-            .opportunity-card {
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            .opportunity-card:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            }
-            .icon-circle {
-              width: 60px;
-              height: 60px;
-              font-size: 1.5rem;
-              color: #fff;
-              background-color: #44d2f6;
-              border-radius: 50%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin: 0 auto;
             }
         </style>
     </head>
@@ -306,6 +228,11 @@
         <i class="fas fa-arrow-right"></i>
       </a>
 
+      <a href="#top-universities" class="d-flex justify-content-between align-items-center px-3 py-2">
+        <span>Top Universities</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+
       <a href="#study-cost" class="d-flex justify-content-between align-items-center px-3 py-2">
         <span>Cost to Study In Australia</span>
         <i class="fas fa-arrow-right"></i>
@@ -419,6 +346,23 @@
               </div>
           </div>
           <hr>
+      </div>
+      <div id="top-universities">
+        <h2>Top Universities</h2>
+          <div class="container py-5">
+            <div class="owl-carousel owl-theme">
+              <div class="item"><img src="../img/universities/australia/1.jpg" alt="University 1"></div>
+              <div class="item"><img src="../img/universities/australia/2.jpg" alt="University 2"></div>
+              <div class="item"><img src="../img/universities/australia/3.jpg" alt="University 3"></div>
+              <div class="item"><img src="../img/universities/australia/4.jpg" alt="University 4"></div>
+              <div class="item"><img src="../img/universities/australia/5.jpg" alt="University 5"></div>
+              <div class="item"><img src="../img/universities/australia/6.jpg" alt="University 6"></div>
+              <div class="item"><img src="../img/universities/australia/7.jpg" alt="University 7"></div>
+              <div class="item"><img src="../img/universities/australia/8.jpg" alt="University 8"></div>
+              <div class="item"><img src="../img/universities/australia/9.jpg" alt="University 9"></div>
+              <div class="item"><img src="../img/universities/australia/10.jpg" alt="University 10"></div>
+            </div>
+          </div>
       </div>
       <div id="study-cost">
           <h2>
