@@ -1165,6 +1165,10 @@
 /*** FAQ'S End ***/
 
 /*** Footer Start ***/
+.tagline {
+    font-size: 25px;
+    color: white;
+}
 .footer {
     background: var(--bs-dark);
 }

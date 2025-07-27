@@ -157,30 +157,29 @@
 
             <!-- Content -->
             <main class="col-md-9 col-lg-10 p-4">
-                <div class="container mt-5">
-                  <h2 class="mb-4">Student Services</h2>
-                  <ul class="nav nav-tabs" id="serviceTabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="course-tab" data-bs-toggle="tab" data-bs-target="#course" type="button" role="tab">🎓 Course & University Selection</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="application-tab" data-bs-toggle="tab" data-bs-target="#application" type="button" role="tab">📝 Application Support</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="visa-tab" data-bs-toggle="tab" data-bs-target="#visa" type="button" role="tab">✈️ Visa Support</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="predeparture-tab" data-bs-toggle="tab" data-bs-target="#predeparture" type="button" role="tab">🧳 Pre-Departure</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="postarrival-tab" data-bs-toggle="tab" data-bs-target="#postarrival" type="button" role="tab">🌍 Post-Arrival (UK)</button>
-                    </li>
-                  </ul>
+                <!-- Navigation Tabs -->
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#course-university-selection" role="tab">🎓 Course & University Selection</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#application-support" role="tab">📝 Application Support</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="tab3-tab" data-bs-toggle="tab" href="#visa-support" role="tab">✈️ Visa Support</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="tab4-tab" data-bs-toggle="tab" href="#pre-departure" role="tab">🧳 Pre-Departure</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="tab5-tab" data-bs-toggle="tab" href="#post-arrival" role="tab">🌍 Post-Arrival (UK)</a>
+    </li>
+  </ul>
 
-                  <div class="tab-content mt-3" id="serviceTabsContent">
-                    <!-- Course & University Selection -->
-                    <div class="tab-pane fade show active" id="course" role="tabpanel">
-                      <h3>🎓 Course & University Selection Services</h3>
+  <!-- Tab Content -->
+  <div class="tab-content mt-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="course-university-selection" role="tabpanel">
+      <h3>🎓 Course & University Selection Services</h3>
                       <p>
                           We help students make informed and confident decisions about their academic future by offering tailored guidance in selecting the right course and university that aligns with their interests, strengths, and long-term goals.
                       </p>
@@ -245,11 +244,9 @@
                             </p>
                         </li>
                       </ul>
-                    </div>
-
-                    <!-- University Application Support -->
-                    <div class="tab-pane fade" id="application" role="tabpanel">
-                      <h3>📝 University Application Support</h3>
+    </div>
+    <div class="tab-pane fade" id="application-support" role="tabpanel">
+      <h3>📝 University Application Support</h3>
                       <p>
                           Once students have selected their desired course and university, we provide end-to-end assistance to ensure a smooth, accurate, and timely application process.
                       </p>
@@ -330,11 +327,9 @@
                             </p>
                         </li>
                       </ul>
-                    </div>
-
-                    <!-- Student Visa Application Support -->
-                    <div class="tab-pane fade" id="visa" role="tabpanel">
-                      <h3>✈️ Student Visa Application Support</h3>
+    </div>
+    <div class="tab-pane fade" id="visa-support" role="tabpanel">
+      <h3>✈️ Student Visa Application Support</h3>
                       <p>
                           We provide end-to-end assistance for student visa applications to leading international study destinations including the UK, Europe, Canada, Australia, and the US. Our expert team ensures students understand the process, meet requirements, and submit strong, error-free applications.
                       </p>
@@ -423,11 +418,9 @@
                             </p>
                         </li>
                       </ul>
-                    </div>
-
-                    <!-- Pre-Departure Support -->
-                    <div class="tab-pane fade" id="predeparture" role="tabpanel">
-                      <h3>🧳 Pre-Departure Support Services</h3>
+    </div>
+    <div class="tab-pane fade" id="pre-departure" role="tabpanel">
+      <h3>🧳 Pre-Departure Support Services</h3>
                       <p>
                         <b>Helping Pakistani Students Prepare for a Smooth Transition Abroad</b>
                         Our pre-departure services ensure that students are fully prepared—academically, emotionally, and logistically—for life in their new country. We equip students and their families with the information, tools, and confidence needed for a successful start to their international education journey.
@@ -501,11 +494,9 @@
                             </p>
                         </li>
                       </ul>
-                    </div>
-
-                    <!-- Post-Arrival Support -->
-                    <div class="tab-pane fade" id="postarrival" role="tabpanel">
-                      <h3>🌍 Exclusive Post-Arrival Support Services (UK)</h3>
+    </div>
+    <div class="tab-pane fade" id="post-arrival" role="tabpanel">
+      <h3>🌍 Exclusive Post-Arrival Support Services (UK)</h3>
                       <p>
                           <b>Having a strong foothold in the UK,</b> We are proud to be one of the very few student consultancy offering a dedicated <b>post-arrival support programme</b> for students arriving in the UK.
                       </p>
@@ -578,9 +569,8 @@
                             </p>
                         </li>
                       </ul>
-                    </div>
-                  </div>
-                </div>
+    </div>
+  </div>
             </main> 
           </div>
         </div>
@@ -620,7 +610,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center tagline">
                    We don’t just send students abroad — we empower futures.
                 </div>
             </div>
@@ -662,5 +652,18 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/nav.js"></script>
+    <!-- Bootstrap JS + Auto-select tab by hash -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const triggerEl = document.querySelector(`a[href="${hash}"]`);
+                if (triggerEl) {
+                  new bootstrap.Tab(triggerEl).show();
+                }
+              }
+        });
+    </script>
     </body>
 </html>
